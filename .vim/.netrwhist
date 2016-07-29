@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/Rome/sites/env/trueview/app/models/api/v2/concerns'
 let g:netrw_dirhist_2='/Users/Rome/Desktop/event_react/react-15.1.0/examples/basic-jsx-precompile'
 let g:netrw_dirhist_3='/Users/Rome/Desktop/event_react/build'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/Rome/.vim'
 let g:netrw_dirhist_6='/Users/Rome/sites/env/bookingbug/angular/js/spec'
 let g:netrw_dirhist_7='/Users/Rome/sites/Full-Stack-Engineer-Ruby/marvelcomics/spec'
 let g:netrw_dirhist_8='/Users/Rome/sites/Full-Stack-Engineer-Ruby/marvelcomics/lib/marvel'
+let g:netrw_dirhist_9='/Users/Rome/.oh-my-zsh'
