@@ -1,4 +1,7 @@
-colorscheme default 
+syntax enable
+set background=light
+colorscheme solarized
+let g:solarized_termcolors=256
 set guifont=Monaco:h16
 set t_Co=256
 set backspace=2
@@ -30,7 +33,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-rails'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'elzr/vim-json'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 filetype plugin indent on 
