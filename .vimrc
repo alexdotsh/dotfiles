@@ -11,6 +11,7 @@ set history=50
 set incsearch
 set laststatus=2
 set number
+set relativenumber
 set tabstop=2
 let mapleader = "\<Space>"
 nmap <leader>so :source $MYVIMRC<cr>
