@@ -78,11 +78,11 @@ prompt_end() {
 # Each component will draw itself, and hide itself if no information needs to be shown
 
 # Context: user@hostname (who am I and where am I)
-prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
-  fi
-}
+#prompt_context() {
+#  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#    prompt_segment black default "%(!.%{%F{yellow}%}.)"
+#  fi
+#}
 
 # Git: branch/detached head, dirty status
 prompt_git() {
@@ -190,16 +190,29 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+prompt_newline() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
+%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n " %{%k%}"
+  fi
+
+  echo -n " %{%f%}"
+  CURRENT_BG=''
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
-  prompt_context
+#  prompt_context
   prompt_dir
   prompt_git
   prompt_hg
+  prompt_newline
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt)'
