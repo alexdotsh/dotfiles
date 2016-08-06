@@ -1,27 +1,30 @@
-syntax enable
 set background=light
-colorscheme solarized
-let g:solarized_termcolors=256
 set guifont=Monaco:h16
 set t_Co=256
-set backspace=2
 set noswapfile
 set ruler
-set history=50
 set incsearch
-set laststatus=2
 set number
 set relativenumber
+set nocompatible
+set history=50
+set shiftwidth=2
+set backspace=2
+set laststatus=2
 set tabstop=2
+set expandtab
+set cursorline
+set cursorcolumn
+
+colorscheme solarized
+let g:solarized_termcolors=256
 let mapleader = "\<Space>"
 nmap <leader>so :source $MYVIMRC<cr>
 imap jk <esc>
 imap kj <esc>
-set nocompatible
+
+syntax enable
 syntax on
-set shiftwidth=2
-set tabstop=2
-set expandtab
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
