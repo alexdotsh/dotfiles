@@ -5,10 +5,10 @@ export ZSH=/Users/Rome/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="nebirhos"
 #ZSH_THEME="bullet-train"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting rails)
 
 # Uncomment the following line to use case-sensitive completion.
@@ -86,3 +86,4 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
