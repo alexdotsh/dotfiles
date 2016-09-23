@@ -11,6 +11,10 @@ ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting rails)
 
+alias gs="git status"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gcm="git commit -m"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

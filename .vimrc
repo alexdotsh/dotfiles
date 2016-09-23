@@ -1,11 +1,9 @@
-set background=light
 set guifont=Monaco:h16
 set t_Co=256
 set noswapfile
-set ruler
 set incsearch
-set number
 set relativenumber
+set number
 set nocompatible
 set history=50
 set shiftwidth=2
@@ -15,9 +13,14 @@ set tabstop=2
 set expandtab
 set cursorline
 set cursorcolumn
+set colorcolumn=80
+set ruler
 
+set background=dark
 colorscheme solarized
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
+let g:solarized_visibility  = "high"
+let g:solarized_contrast    = "high"
 let mapleader = "\<Space>"
 nmap <leader>so :source $MYVIMRC<cr>
 imap jk <esc>
@@ -42,5 +45,10 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'JulesWang/css.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'
 call vundle#end()
 filetype plugin indent on 

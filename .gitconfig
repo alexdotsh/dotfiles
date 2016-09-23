@@ -4,4 +4,6 @@
 	name  = alexmirk
 	email = alex.mirkhaydarov@gmail.com
 [core]
-	editor = vim  -n -w
+	editor = vim
+[push]
+	default = matching
