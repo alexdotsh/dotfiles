@@ -2,6 +2,8 @@ export PS1=" \\$ \w \[$(tput sgr0)\]\[\e[36m\]\$(parse_git_branch)\[\e[m\] \nðŸŽ
 
 export  TERM="xterm-256color"
 
+export PATH=${PATH}:/usr/local/bin/mysql
+
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
@@ -28,9 +30,9 @@ alias t="tail -f log/development.log"
 alias rspec="bundle exec rspec"
 alias rv="ruby -v"
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
-eval "$(thefuck --alias FUCK)"
+#eval "$(thefuck --alias FUCK)"
 
 eval "$(rbenv init -)"
 # export PATH=$HOME/.rbenv/bin:$PATH

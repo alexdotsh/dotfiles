@@ -9,12 +9,17 @@ ZSH_THEME="robbyrussell"
 #ZSH_THEME="nebirhos"
 #ZSH_THEME="bullet-train"
 #ZSH_THEME="agnoster"
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting rails)
+plugins=(git sublime tmux colored-man colorize github ssh-agent virtualenv pip python brew osx zsh-syntax-highlighting rails)
 
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias app="cd /Users/Rome/sites"
 alias gs="git status"
-alias gcb="git checkout -b"
-alias gco="git checkout"
-alias gcm="git commit -m"
+alias gb="git branch"
+alias gl="git log"
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -75,6 +80,8 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='mvim'
 fi
+
+#export EDITOR=/usr/bin/subl
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
