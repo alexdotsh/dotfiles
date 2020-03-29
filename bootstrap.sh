@@ -12,9 +12,11 @@ fi
 
 brew update
 
-tap 'homebrew/cask'
-
 # Brew install
 brew install git # Updated version of git
+
+# Cask install
+brew cask install iterm2
+brew cask install visual-studio-code
 
 echo "Finished bootstrap"
