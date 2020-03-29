@@ -2,8 +2,6 @@
 
 echo "Running bootstrap"
 
-# xcode-select --install
-
 # Check for Homebrew and then install if not found
 
 if /bin/test ! "$(which brew)"; then
