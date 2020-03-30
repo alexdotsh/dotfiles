@@ -16,4 +16,13 @@ brew bundle
 # Create project source directory
 mkdir -p ~/.source
 
+# Install and configure default Prezto configuration framework
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+# Run it on zsh shell
+zsh -c 'setopt EXTENDED_GLOB \
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done'
+
 echo "Finished bootstrap"
