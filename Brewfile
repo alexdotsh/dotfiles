@@ -1,4 +1,5 @@
 # Binaries
+brew 'zsh'
 brew 'bash'
 brew 'git' # Updated version of git
 brew 'tree'
