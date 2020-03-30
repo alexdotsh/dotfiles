@@ -10,12 +10,8 @@ fi
 
 brew update
 
-# Brew install
-brew install git # Updated version of git
-
-# Cask install
-brew cask install iterm2
-brew cask install visual-studio-code
+# Brew bundle
+brew bundle
 
 # Create project source directory
 mkdir -p ~/.source
