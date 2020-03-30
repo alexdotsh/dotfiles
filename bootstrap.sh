@@ -17,4 +17,7 @@ brew install git # Updated version of git
 brew cask install iterm2
 brew cask install visual-studio-code
 
+# Create project source directory
+mkdir -p ~/.source
+
 echo "Finished bootstrap"
