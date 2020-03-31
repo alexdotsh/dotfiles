@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
-#
-# Garrett Zsh Theme for Prezto
-# Created with modified code by Chauncey Garrett - @chauncey_io
-#
+# 
+# Thanks Chauncey Garrett - @chauncey_io
 # http://chauncey.io/projects/zsh-prompt-garrett/
 #
 # A prompt with the information you need the moment you need it.
@@ -31,50 +29,6 @@ fi
 # Load dependencies.
 pmodload 'helper'
 zmodload -i zsh/datetime
-
-# Prompt configuration help.
-# TODO not even remotely finished...
-# function prompt_garrett_help() {
-# cat <<'EOF'
-
-# This prompt is configurable via styles:
-
-  # Context: :prompt:garrett
-
-  # Colors (red green yellow blue magenta cyan white grey):
-    # prompt_garrett_color_user     The color for user@host. Defaults to 'green'
-    # root_color                    The color for the hostname for root. Defaults to 'red'
-    # prompt_garrett_color_prompt   The color for everything else. Defaults to ''
-
-  # Path (path type - possible values):
-    # ratio    Use COLUMNS/ratio to clip the path. Default.
-    # fixed    Use a fixed maximum length.
-    # subdir   Clip by number of subdirectories.
-    # full     Show the full path
-
-  # Path length styles:
-    # ratio    The ratio for the 'ratio' path style, funnily enough. Defaults to 6.
-    # length   The maximum length for the 'fixed' path style. Defaults to 20.
-    # subdir   The number of subdirectories to show for the 'subdir' path style. Defaults to 3.
-
-  # You can set styles in the current terminal to test things out, values will be updated.
-
-# EOF
-# }
-
-# Display a preview of the prompt.
-# TODO not ready.
-# function prompt_garrett_preview {
-
-  # Display the passed in parameters.
-  # if (( $> 0 )); then
-    # prompt_preview_theme 'garrett' "$@"
-
-  # Display the default settings.
-  # else
-    # prompt_preview_theme 'garrett' red green blue
-  # fi
-# }
 
 # Notify of command completion after n seconds has passed.
 function prompt_garrett_precmd_notification {
@@ -342,24 +296,6 @@ function prompt_garrett_setup {
   else
     unset prompt_garrett_return_code
   fi
-
-  # Keep the time updated.
-  # TODO: Figure out a better way to do this.
-  # function schedprompt() {
-    # emulate -L zsh
-    # zmodload -i zsh/sched
-
-    # # Remove existing event, so that multiple calls to "schedprompt" work OK (you could put one in precmd to push the timer 30 seconds into the future, for example).
-    # integer i=${"${(@)zsh_scheduled_events#*:*:}"[(i)schedprompt]}
-    # (( i )) && sched -$i
-
-    # # Test that zle is running before calling the widget (recommended to avoid error messages). Otherwise it updates on entry to zle, so there's no loss.
-    # zle && zle reset-prompt
-
-    # # This ensures we're not too far off the start of the minute.
-    # sched +1 schedprompt
-  # }
-  # schedprompt
 
   #
   # Report terminal line number.
