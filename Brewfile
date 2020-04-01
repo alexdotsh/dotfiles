@@ -4,6 +4,7 @@ brew 'bash'
 brew 'git' # Updated version of git
 brew 'tree'
 brew 'tmux'
+brew 'wget'
 
 # Cask install
 cask 'iterm2'
