@@ -1,6 +1,8 @@
 # dotfiles
 
-## Installation
+* [Installation](#installation)
+
+# Installation
 
 ```bash
 curl -O https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/bootstrap.sh
