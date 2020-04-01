@@ -5,6 +5,7 @@ brew 'git' # Updated version of git
 brew 'tree'
 brew 'tmux'
 brew 'wget'
+brew 'watch'
 
 # Cask install
 cask 'iterm2'
