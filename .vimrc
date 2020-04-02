@@ -1,4 +1,18 @@
-set guifont=Monaco:h16
+filetype off
+
+" Vundle config
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
+
+filetype plugin indent on
+
+syntax enable
+syntax on
 set t_Co=256
 set noswapfile
 set incsearch
@@ -15,27 +29,18 @@ set cursorline
 set cursorcolumn
 set colorcolumn=80
 set ruler
-
 set background=dark
-colorscheme solarized
-"let g:solarized_termcolors=256
+
+try
+  colorscheme solarized
+  catch
+endtry
+
+let g:solarized_termcolors=256
 let g:solarized_visibility  = "high"
 let g:solarized_contrast    = "high"
 let mapleader = "\<Space>"
+
 nmap <leader>so :source $MYVIMRC<cr>
 imap jk <esc>
 imap kj <esc>
-
-syntax enable
-syntax on
-filetype off
-
-" Vundle config
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-
-call vundle#end()
-filetype plugin indent on 
