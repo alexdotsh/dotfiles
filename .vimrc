@@ -28,11 +28,14 @@ imap kj <esc>
 
 syntax enable
 syntax on
-
 filetype off
+
+" Vundle config
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()
 filetype plugin indent on 

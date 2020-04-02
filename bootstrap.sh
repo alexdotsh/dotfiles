@@ -28,4 +28,7 @@ done'
 # Download Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+# Install Plugins
+vim +PluginInstall +qall
+
 echo "Finished bootstrap"
