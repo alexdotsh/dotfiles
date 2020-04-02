@@ -11,14 +11,13 @@ call vundle#end()
 
 filetype plugin indent on
 
-syntax enable
 syntax on
 
 set t_Co=256
 set incsearch
 set number relativenumber
 set nocompatible
-set history=50
+set history=200
 set shiftwidth=2
 set backspace=2
 set laststatus=2
@@ -30,14 +29,13 @@ set cursorcolumn
 set colorcolumn=100
 set ruler
 
+syntax enable
+set background=dark
 try
   colorscheme solarized
   catch
 endtry
 
-let g:solarized_termcolors=256
-let g:solarized_visibility  = "high"
-let g:solarized_contrast    = "high"
 let mapleader = "\<Space>"
 
 nmap <leader>so :source $MYVIMRC<cr>
