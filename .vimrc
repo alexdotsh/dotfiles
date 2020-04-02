@@ -27,7 +27,8 @@ set tabstop=2
 set expandtab
 set cursorline
 set cursorcolumn
-set colorcolumn=80
+set colorcolumn=100
+highlight ColorColumn ctermbg=lightcyan guibg=blue
 set ruler
 set background=dark
 
