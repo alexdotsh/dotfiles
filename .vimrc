@@ -13,11 +13,10 @@ filetype plugin indent on
 
 syntax enable
 syntax on
+
 set t_Co=256
-set noswapfile
 set incsearch
-set relativenumber
-set number
+set number relativenumber
 set nocompatible
 set history=50
 set shiftwidth=2
@@ -25,12 +24,11 @@ set backspace=2
 set laststatus=2
 set tabstop=2
 set expandtab
+
 set cursorline
 set cursorcolumn
 set colorcolumn=100
-highlight ColorColumn ctermbg=lightcyan guibg=blue
 set ruler
-set background=dark
 
 try
   colorscheme solarized
