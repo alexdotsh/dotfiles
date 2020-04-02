@@ -4,6 +4,7 @@ brew 'curl'
 brew 'git' # Updated version of git
 brew 'tree'
 brew 'tmux'
+brew 'vim'
 brew 'watch'
 brew 'wget'
 brew 'zsh'
