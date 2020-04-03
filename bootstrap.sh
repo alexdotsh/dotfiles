@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Running bootstrap"
+echo "Running bootstrapping"
 
 # Check for Homebrew and then install if not found
 if /bin/test ! "$(which brew)"; then
@@ -16,19 +16,27 @@ brew bundle
 # Create project source directory
 mkdir -p ~/.source
 
-# Install and configure default Prezto configuration framework
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+# Download Prezto and configure if not found
+if [[ ! -d "$HOME/.zprezto" ]]; then
+  # Install and configure default Prezto configuration framework
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-# Run it on zsh shell
-zsh -c 'setopt EXTENDED_GLOB \
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done'
+  # Run it on zsh shell
+  zsh -c 'setopt EXTENDED_GLOB \
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done'
+fi
 
-# Download Vundle
-# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Download Vundle if .vim directory is not found
+if [[ ! -d "$HOME/.vim" ]]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git "$HOME"/.vim/bundle/Vundle.vim
 
-# Install Plugins
-# vim +PluginInstall +qall
+  # Symlink to home
+  ln -s ./.vimrc "$HOME"/.vimrc
 
-echo "Finished bootstrap"
+  # Install Plugins
+  vim +PluginInstall +qall
+fi
+
+echo "Finished bootstrapping"
