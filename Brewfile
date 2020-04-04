@@ -20,5 +20,4 @@ cask 'docker'
 cask 'keybase'
 
 # Java versions
-# cask 'adoptopenjdk11-openj9-jre'
-cask 'adoptopenjdk13-openj9-jre'
+cask 'adoptopenjdk13'

@@ -11,4 +11,7 @@ jdk() {
   version=$1
   export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
   java -version
+
+  # Can change version by running 
+  # `jdk 13` in the terminal
 }
