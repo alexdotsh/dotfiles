@@ -1,7 +1,10 @@
+# Add tap
+tap 'AdoptOpenJDK/openjdk'
+
 # Binaries
 brew 'bash'
 brew 'curl'
-brew 'git' # Updated version of git
+brew 'git'
 brew 'tree'
 brew 'tmux'
 brew 'vim'
@@ -15,3 +18,7 @@ cask 'visual-studio-code'
 cask 'docker'
 # cask 'jetbrains-toolbox'
 cask 'keybase'
+
+# Java versions
+# cask 'adoptopenjdk11-openj9-jre'
+cask 'adoptopenjdk13-openj9-jre'
