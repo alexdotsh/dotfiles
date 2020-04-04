@@ -2,6 +2,10 @@
 
 echo "Running bootstrapping"
 
+if [[ ! -d "$HOME/.source" ]]; then
+  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "$HOME/.source"
+fi
+
 # Check for Homebrew and then install if not found
 if /bin/test ! "$(which brew)"; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -12,9 +16,6 @@ brew update
 
 # Brew bundle
 brew bundle
-
-# Create project source directory
-mkdir -p ~/.source
 
 # Download Prezto and configure if not found
 if [[ ! -d "$HOME/.zprezto" ]]; then
@@ -33,10 +34,12 @@ if [[ ! -d "$HOME/.vim" ]]; then
   git clone https://github.com/VundleVim/Vundle.vim.git "$HOME"/.vim/bundle/Vundle.vim
 
   # Symlink to home
-  ln -s ./.vimrc "$HOME"/.vimrc
+  ln -s .vimrc "$HOME"/.vimrc
 
   # Install Plugins
   vim +PluginInstall +qall
 fi
+
+ln -sf "$HOME/.source/dotfiles/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
 
 echo "Finished bootstrapping"
