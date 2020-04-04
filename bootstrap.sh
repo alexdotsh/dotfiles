@@ -33,13 +33,12 @@ fi
 if [[ ! -d "$HOME/.vim" ]]; then
   git clone https://github.com/VundleVim/Vundle.vim.git "$HOME"/.vim/bundle/Vundle.vim
 
-  # Symlink to home
-  ln -s .vimrc "$HOME"/.vimrc
-
   # Install Plugins
   vim +PluginInstall +qall
 fi
 
+# Start the symlink
 ln -sf "$HOME/.source/dotfiles/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
+ln -sf "$HOME/.source/dotfiles/.vimrc" "$HOME"/.vimrc
 
 echo "Finished bootstrapping"
