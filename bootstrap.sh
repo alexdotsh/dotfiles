@@ -40,5 +40,6 @@ fi
 # Start the symlink
 ln -sf "$HOME/.source/dotfiles/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
 ln -sf "$HOME/.source/dotfiles/.vimrc" "$HOME"/.vimrc
+ln -sf "$HOME/.source/dotfiles/.tmux.conf" "$HOME"/.tmux.conf
 
 echo "Finished bootstrapping"
