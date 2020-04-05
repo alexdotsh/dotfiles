@@ -38,9 +38,10 @@ if [[ ! -d "$HOME/.vim" ]]; then
 fi
 
 # Start the symlink
-ln -sf "$HOME/.source/dotfiles/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
 ln -sf "$HOME/.source/dotfiles/runcoms/.zpreztorc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zpreztorc
 ln -sf "$HOME/.source/dotfiles/runcoms/.zprofile" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zprofile
+ln -sf "$HOME/.source/dotfiles/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
+ln -sf "$HOME/.source/dotfiles/functions/prompt_garrett_setup" "${ZDOTDIR:-$HOME}"/.zprezto/modules/prompt/functions/prompt_garrett_setup
 ln -sf "$HOME/.source/dotfiles/.vimrc" "$HOME"/.vimrc
 ln -sf "$HOME/.source/dotfiles/.tmux.conf" "$HOME"/.tmux.conf
 
