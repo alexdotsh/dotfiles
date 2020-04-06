@@ -4,6 +4,8 @@
 
 # Installation
 
+macOS
+
 ```bash
 softwareupdate -i -a
 xcode-select --install
