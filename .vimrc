@@ -31,6 +31,7 @@ set ruler
 
 syntax enable
 set background=dark
+let g:solarized_termtrans = 1
 try
   colorscheme solarized
   catch
