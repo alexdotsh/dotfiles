@@ -15,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "alex"
-sudo scutil --set HostName "alex"
-sudo scutil --set LocalHostName "alex"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "alex"
+sudo scutil --set ComputerName "amosx"
+sudo scutil --set HostName "amosx"
+sudo scutil --set LocalHostName "amosx"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "amosx"

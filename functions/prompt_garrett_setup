@@ -160,7 +160,7 @@ function prompt_garrett_precmd {
   prompt_garrett_number_jobs="%(1j.${prompt_garrett_color_prompt}J:%F{cyan}%j .)"
 
   # Format PWD.
-  prompt_garrett_pwd="${prompt_garrett_color_pwd}$(prompt-pwd)"
+  prompt_garrett_pwd="${prompt_garrett_color_pwd}$(pwd)"
 
 	# check exec time and store it in a variable
 	prompt_garrett_check_cmd_exec_time
