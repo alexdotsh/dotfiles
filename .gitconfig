@@ -1,9 +1,9 @@
 [color]
-	ui = true
+    ui = true
 [user]
-	name = Alex Mirkhaydarov
-	email = alex.mirkhaydarov@gmail.com
+    name = Alex Mirkhaydarov
+    email = alex.mirkhaydarov@gmail.com
 [core]
-	editor = vim
+    editor = vim
 [push]
-	default = matching
+    default = matching
