@@ -1,9 +1,11 @@
 # Add tap
 tap 'AdoptOpenJDK/openjdk'
+tap 'dart-lang/dart'
 
 # Binaries
 brew 'bash'
 brew 'curl'
+brew 'dart'
 brew 'git'
 brew 'grep'
 brew 'pwgen'
