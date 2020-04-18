@@ -37,6 +37,11 @@ if [[ ! -d "$HOME/.vim" ]]; then
   vim +PluginInstall +qall
 fi
 
+# Istall Flutter SDK
+if [[ ! -d "$HOME/.source/flutter_sdk" ]]; then
+  git clone https://github.com/flutter/flutter.git -b stable "$HOME/.source/flutter_sdk"
+fi
+
 # Start the symlink
 ln -sf "$HOME/.source/dotfiles/runcoms/.zpreztorc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zpreztorc
 ln -sf "$HOME/.source/dotfiles/runcoms/.zprofile" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zprofile
