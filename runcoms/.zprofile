@@ -48,3 +48,13 @@ fi
 # Either use with prefix g or add a "gnubin" directory to PATH
 # https://formulae.brew.sh/formula/grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
+# Add brewed ruby to PATH
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+# Export flutter if the sdk exists
+if [[ -d "$HOME/.source/flutter_sdk" ]]; then
+  export PATH="$PATH:$HOME/.source/flutter_sdk/bin"
+fi
