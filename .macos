@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Starting configuration"
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -19,3 +21,5 @@ sudo scutil --set ComputerName "amosx"
 sudo scutil --set HostName "amosx"
 sudo scutil --set LocalHostName "amosx"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "amosx"
+
+echo "Finished configuration"

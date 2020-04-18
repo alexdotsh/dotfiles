@@ -12,6 +12,10 @@ xcode-select --install
 ```
 
 ```bash
+source .macos
+```
+
+```bash
 curl -O https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/bootstrap.sh
 chmod +x bootstrap.sh
 ./bootstrap.sh
