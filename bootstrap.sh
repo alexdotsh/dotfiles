@@ -11,12 +11,6 @@ if /bin/test ! "$(which brew)"; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-# Update ond upgrade brew
-brew update
-brew upgrade
-
-# Brew bundle
-brew bundle
 
 # Download Prezto and configure if not found
 if [[ ! -d "$HOME/.zprezto" ]]; then
