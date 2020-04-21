@@ -11,6 +11,8 @@ if /bin/test ! "$(which brew)"; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+echo -e "Brewing..\U2615"
+source brew.sh
 
 # Download Prezto and configure if not found
 if [[ ! -d "$HOME/.zprezto" ]]; then
@@ -44,10 +46,5 @@ ln -sf "$HOME/.source/dotfiles/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runc
 ln -sf "$HOME/.source/dotfiles/functions/prompt_garrett_setup" "${ZDOTDIR:-$HOME}"/.zprezto/modules/prompt/functions/prompt_garrett_setup
 ln -sf "$HOME/.source/dotfiles/.vimrc" "$HOME"/.vimrc
 ln -sf "$HOME/.source/dotfiles/.tmux.conf" "$HOME"/.tmux.conf
-
-# symlink dart sdk to Flutter bin
-if [[ -d "$HOME/.source/flutter_sdk/bin/cache/dart-sdk" ]]; then
-  ln -sf "$(brew --prefix)/opt/dart/libexec" "$HOME/.source/flutter_sdk/bin/cache/dart-sdk"
-fi
 
 echo "Finished bootstrapping"
