@@ -45,9 +45,9 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-# Either use with prefix g or add a "gnubin" directory to PATH
-# https://formulae.brew.sh/formula/grep
+# Adding GNU core utilities to `$PATH`.
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Add brewed ruby to PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
