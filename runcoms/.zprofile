@@ -49,15 +49,22 @@ fi
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# Add brewed ruby to PATH
+# brewed ruby to PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
-# Add brewed openssl to PATH
+# brewed openssl to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+# brewed python 3.8 to PATH
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/python@3.8/lib"
+
+# brewed ssh-copy-id to PATH
+export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
 
 # Export flutter if the sdk exists
 if [[ -d "$HOME/.source/flutter_sdk" ]]; then
