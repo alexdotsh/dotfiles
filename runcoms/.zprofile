@@ -70,3 +70,8 @@ export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
 if [[ -d "$HOME/.source/flutter_sdk" ]]; then
   export PATH="$PATH:$HOME/.source/flutter_sdk/bin"
 fi
+
+# brewed curl to PATH
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/curl/lib"
+export CPPFLAGS="-I/usr/local/opt/curl/include"
