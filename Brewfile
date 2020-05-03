@@ -25,6 +25,7 @@ cask 'visual-studio-code'
 cask 'docker'
 # cask 'jetbrains-toolbox'
 cask 'keybase'
+cask 'xquartz'
 
 # Java versions
 cask 'adoptopenjdk13'
