@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Running bootstrapping"
+echo -e "Start bootstrapping.. \U1F3C1"
 
 if [[ ! -d "$HOME/.source" ]]; then
   git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "$HOME/.source"
@@ -11,7 +11,7 @@ if /bin/test ! "$(which brew)"; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-echo -e "Brewing..\U2615"
+echo -e "Brewing..\U1F37A" 
 source brew.sh
 
 # Download Prezto and configure if not found
@@ -39,6 +39,7 @@ if [[ ! -d "$HOME/.source/flutter_sdk" ]]; then
   git clone https://github.com/flutter/flutter.git -b stable "$HOME/.source/flutter_sdk"
 fi
 
+echo -e "Symlinking.. \U1F517"
 # Start the symlink
 ln -sf "$HOME/.source/dotfiles/runcoms/.zpreztorc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zpreztorc
 ln -sf "$HOME/.source/dotfiles/runcoms/.zprofile" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zprofile
@@ -47,4 +48,4 @@ ln -sf "$HOME/.source/dotfiles/functions/prompt_garrett_setup" "${ZDOTDIR:-$HOME
 ln -sf "$HOME/.source/dotfiles/.vimrc" "$HOME"/.vimrc
 ln -sf "$HOME/.source/dotfiles/.tmux.conf" "$HOME"/.tmux.conf
 
-echo "Finished bootstrapping"
+echo -e "Finished bootstrapping.. \U1F3AD"
