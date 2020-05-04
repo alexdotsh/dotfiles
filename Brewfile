@@ -9,6 +9,7 @@ brew 'curl'
 brew 'dart'
 brew 'git'
 brew 'grep'
+brew 'nmap'
 brew 'openssh'
 brew 'pwgen'
 brew 'ssh-copy-id'
@@ -25,6 +26,8 @@ cask 'visual-studio-code'
 cask 'docker'
 # cask 'jetbrains-toolbox'
 cask 'keybase'
+
+# open -a XQuartz to use
 cask 'xquartz'
 
 # Java versions
