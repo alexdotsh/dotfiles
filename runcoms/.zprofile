@@ -45,6 +45,11 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
+# Export flutter if the sdk exists
+if [[ -d "$HOME/.source/flutter_sdk" ]]; then
+  export PATH="$PATH:$HOME/.source/flutter_sdk/bin"
+fi
+
 # Adding GNU core utilities to `$PATH`.
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -52,21 +57,16 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # brewed ruby to PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
-# brewed openssl to PATH
+# export brewed openssl to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-# brewed python 3.8 to PATH
+# export brewed python 3.8 to PATH
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
-# brewed ssh-copy-id to PATH
+# export brewed ssh-copy-id to PATH
 export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
 
-# Export flutter if the sdk exists
-if [[ -d "$HOME/.source/flutter_sdk" ]]; then
-  export PATH="$PATH:$HOME/.source/flutter_sdk/bin"
-fi
-
-# brewed curl to PATH
+# export brewed curl to PATH
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
