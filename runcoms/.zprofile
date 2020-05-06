@@ -54,19 +54,11 @@ fi
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# brewed ruby to PATH
+# brewed packages to PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-# export brewed openssl to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-
-# export brewed python 3.8 to PATH
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-
-# export brewed ssh-copy-id to PATH
 export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
-
-# export brewed curl to PATH
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
