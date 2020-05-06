@@ -51,17 +51,12 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # brewed ruby to PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 # brewed openssl to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
 # brewed python 3.8 to PATH
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/python@3.8/lib"
 
 # brewed ssh-copy-id to PATH
 export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
@@ -73,5 +68,7 @@ fi
 
 # brewed curl to PATH
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/curl/lib"
-export CPPFLAGS="-I/usr/local/opt/curl/include"
+
+# Set LDFLAGS and CPPFLAGS flags
+export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include"
