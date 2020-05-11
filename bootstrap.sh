@@ -50,5 +50,6 @@ ln -sf "${DOTFILES_DIR}/functions/prompt_garrett_setup" "${ZDOTDIR:-$HOME}"/.zpr
 ln -sf "${DOTFILES_DIR}/.vimrc" "$HOME"/.vimrc
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "${DOTFILES_DIR}/.gitconfig" "$HOME"/.gitconfig
+ln -sf "$(brew --prefix)/opt/dart/libexec" "$HOME/.source/flutter_sdk/bin/cache/dart-sdk"
 
 echo -e "Finished bootstrapping.. \U1F3AD"
