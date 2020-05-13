@@ -425,4 +425,3 @@ ${prompt_garrett_color_prompt}Correct %F{red}%R${prompt_garrett_color_prompt} to
 }
 
 prompt_garrett_setup "$@"
-
