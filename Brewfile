@@ -9,7 +9,6 @@ brew 'curl'
 brew 'dart'
 brew 'git'
 brew 'grep'
-brew 'gtk+3'
 brew 'jq'
 brew 'node@14'
 brew 'nmap'
@@ -25,6 +24,10 @@ brew 'watch'
 brew 'wget'
 brew 'yq'
 brew 'zsh'
+
+## For emulators
+brew 'gtk+3'
+brew 'adwaita-icon-theme'
 
 # Cask install
 cask 'iterm2'
