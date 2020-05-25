@@ -28,6 +28,8 @@ brew 'zsh'
 ## For emulators
 brew 'gtk+3'
 brew 'adwaita-icon-theme'
+brew 'qt5'
+
 
 # Cask install
 cask 'iterm2'
