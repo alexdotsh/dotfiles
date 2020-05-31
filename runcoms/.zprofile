@@ -61,7 +61,10 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
-export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/qt/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/qt/include"
+export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/qt/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/qt/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
