@@ -36,8 +36,11 @@ brew 'qt5'
 cask 'iterm2'
 cask 'visual-studio-code'
 cask 'docker'
-# cask 'jetbrains-toolbox'
 cask 'keybase'
+
+# Currently installed on the system
+# cask 'jetbrains-toolbox'
+# cask 'dashlane'
 
 # open -a XQuartz to use
 cask 'xquartz'
