@@ -31,7 +31,6 @@ brew 'gtk+3'
 brew 'adwaita-icon-theme'
 brew 'qt5'
 
-
 # Cask install
 cask 'iterm2'
 cask 'visual-studio-code'

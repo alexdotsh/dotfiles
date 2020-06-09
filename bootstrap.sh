@@ -18,12 +18,6 @@ source brew.sh
 if [[ ! -d "${HOME}/.zprezto" ]]; then
   # Install and configure default Prezto configuration framework
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-  # Run it on zsh shell
-  zsh -c 'setopt EXTENDED_GLOB \
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done'
 fi
 
 # Download Vundle if .vim directory is not found
