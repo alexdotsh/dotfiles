@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
-
 # Update brew itself
 brew update
 
