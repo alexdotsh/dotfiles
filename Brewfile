@@ -4,10 +4,12 @@ tap 'dart-lang/dart'
 
 # Binaries
 brew 'bash'
+brew 'bat'
 brew 'coreutils'
 brew 'curl'
 brew 'cmake'
 brew 'dart'
+brew 'findutils'
 brew 'git'
 brew 'grep'
 brew 'jq'
