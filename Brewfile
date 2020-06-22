@@ -26,7 +26,10 @@ brew 'vim'
 brew 'watch'
 brew 'wget'
 brew 'yq'
+
 brew 'zsh'
+brew 'zsh-syntax-highlighting'
+brew 'zsh-autosuggestions'
 
 ## For emulators
 brew 'gtk+3'
