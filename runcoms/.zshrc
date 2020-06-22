@@ -71,7 +71,9 @@ autoload -U +X bashcompinit && bashcompinit
 
 if [ $commands[kubectl] ]; then 
   source <(kubectl completion zsh)
+  
   alias k=kubectl
+  complete -F __start_kubectl k 
 fi
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
