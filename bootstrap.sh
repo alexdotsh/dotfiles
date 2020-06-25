@@ -50,12 +50,17 @@ echo -e "Symlinking.. \U1F517"
 DOTFILES_DIR="${PWD}"
 
 # Start the symlink
-ln -sf "${DOTFILES_DIR}/runcoms/.zpreztorc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zpreztorc
-ln -sf "${DOTFILES_DIR}/runcoms/.zprofile" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zprofile
-ln -sf "${DOTFILES_DIR}/runcoms/.zshrc" "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
+ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}"/.zsh_private
 ln -sf "${DOTFILES_DIR}/functions/prompt_garrett_setup" "${ZDOTDIR:-$HOME}"/.zprezto/modules/prompt/functions/prompt_garrett_setup
-ln -sf "${DOTFILES_DIR}/.vimrc" "$HOME"/.vimrc
-ln -sf "${DOTFILES_DIR}/.tmux.conf" "$HOME"/.tmux.conf
-ln -sf "${DOTFILES_DIR}/.gitconfig" "$HOME"/.gitconfig
+ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}"/.vimrc
+ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}"/.tmux.conf
+ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}"/.gitconfig
+
+if grep -Fxq "[ -r ~/.zsh_private ] && source ~/.zsh_private" "${HOME}"/.zshrc
+then
+  echo ''
+else
+  echo '[ -r ~/.zsh_private ] && source ~/.zsh_private' >> "${HOME}"/.zshrc
+fi
 
 echo -e "Finished bootstrapping.. \U1F3AD"
