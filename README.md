@@ -20,3 +20,8 @@ curl -O https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/boots
 chmod +x bootstrap.sh
 ./bootstrap.sh
 ```
+
+`zpreztorc` modifications
+
+Add `git` module to `zstyle ':prezto:load' pmodule`
+Change theme in `zstyle ':prezto:module:prompt' theme 'sorin'` to `garrett`
