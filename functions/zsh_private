@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+
+WORKDIR="${HOME}/workspace"
+export WORKDIR
   
 # Switch between different JDK versions
 jdk() {
@@ -73,8 +76,8 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Export flutter if the sdk exists
-if [[ -d "$HOME/.source/flutter_sdk" ]]; then
-  export PATH="$PATH:$HOME/.source/flutter_sdk/bin"
+if [[ -d "$WORKDIR/flutter_sdk" ]]; then
+  export PATH="$PATH:$WORKDIR/flutter_sdk/bin"
 fi
 
 # Adding GNU core utilities to `$PATH`.
