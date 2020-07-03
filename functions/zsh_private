@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
+
 WORKDIR="${HOME}/workspace"
 export WORKDIR
   
@@ -31,16 +33,7 @@ compinit
 
 zmodload -i zsh/complist
 
-zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
-
 autoload -U +X bashcompinit && bashcompinit
-
-if [ $commands[kubectl] ]; then 
-  source <(kubectl completion zsh)
-  
-  alias k=kubectl
-  complete -F __start_kubectl k 
-fi
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -69,5 +62,12 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Set LDFLAGS and CPPFLAGS flags
 export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/qt/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/qt/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
+
+if [ $commands[kubectl] ]; then 
+  source <(kubectl completion zsh)
+  
+  alias k=kubectl
+  complete -F __start_kubectl k 
+fi
 
 alias cat='bat'
