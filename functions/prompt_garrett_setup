@@ -105,7 +105,7 @@ function prompt_garrett_chpwd {
 
     # BSD flavor ls.
     if zstyle -t ':prezto:module:utility:ls' color; then
-      ls -GFlha
+      ls -GFlha --group-directories-first --color=auto
     else
       ls -F
     fi
