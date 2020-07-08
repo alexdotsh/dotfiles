@@ -27,12 +27,12 @@ if [[ ! -d "${HOME}/.zprezto" ]]; then
   echo "Cloning prezto and initializing"
 
   # Install and configure default Prezto configuration framework
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${HOME}/.zprezto"
 
   # Run it on zsh shell		
   /bin/zsh -c 'setopt EXTENDED_GLOB;		
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do		
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"		
+  for rcfile in "${HOME}"/.zprezto/runcoms/^README.md(.N); do		
+    ln -s "$rcfile" "${HOME}/.${rcfile:t}"		
   done'
 fi
 
@@ -49,7 +49,7 @@ fi
 # Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
-# Istall Flutter SDK
+# Install Flutter SDK
 if [[ ! -d "${WORKDIR}/flutter_sdk" ]]; then
   echo "Cloning Flutter and setting up Dart"
 
@@ -64,16 +64,16 @@ DOTFILES_DIR="${PWD}"
 
 # Start the symlink
 ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}/.zsh_private"
-ln -sf "${DOTFILES_DIR}/functions/prompt_garrett_setup" "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_garrett_setup"
+ln -sf "${DOTFILES_DIR}/functions/prompt_garrett_setup" "${HOME}/.zprezto/modules/prompt/functions/prompt_garrett_setup"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 
-if grep -Fxq "[ -r ~/.zsh_private ] && source ~/.zsh_private" "${HOME}/.zshrc"
+if grep -Fxq "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" "${HOME}/.zshrc"
 then
   echo ''
 else
-  echo '[ -r ~/.zsh_private ] && source ~/.zsh_private' >> "${HOME}/.zshrc"
+  echo "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" >> "${HOME}/.zshrc"
 fi
 
 echo -e "Finished bootstrapping.. \U1F3AD"
