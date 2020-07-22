@@ -72,3 +72,5 @@ alias cat='bat'
 alias ls='ls --color=auto --group-directories-first'
 
 eval "$(dircolors ~/.dir_colors/dircolors.256dark)"
+
+export EDITOR="vim"
