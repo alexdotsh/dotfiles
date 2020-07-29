@@ -33,8 +33,8 @@ zmodload -i zsh/complist
 
 autoload -U +X bashcompinit && bashcompinit
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#e60073'
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Export flutter if the sdk exists
@@ -68,9 +68,16 @@ if [ $commands[kubectl] ]; then
   complete -F __start_kubectl k 
 fi
 
-alias cat='bat'
+command -v bat > /dev/null && alias cat='bat --pager=never'
+command -v bat > /dev/null && alias less='bat'
 alias ls='ls --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
 
 eval "$(dircolors ~/.dir_colors/dircolors.256dark)"
 
 export EDITOR="vim"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME="Solarized (dark)"
