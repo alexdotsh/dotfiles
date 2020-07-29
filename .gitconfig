@@ -1,5 +1,10 @@
 [color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
     ui = true
+    pager = true
 [user]
     name = Alex Mirkhaydarov
     email = alex.mirkhaydarov@gmail.com
