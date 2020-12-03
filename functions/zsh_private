@@ -33,9 +33,9 @@ zmodload -i zsh/complist
 
 autoload -U +X bashcompinit && bashcompinit
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#e60073'
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#e60073'
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Export flutter if the sdk exists
 if [[ -d "$WORKDIR/flutter_sdk" ]]; then
@@ -57,6 +57,7 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
 export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/qt/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
@@ -64,6 +65,7 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/incl
 
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/curl/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/ruby/lib/pkgconfig"
 
 if [ $commands[kubectl] ]; then 
   source <(kubectl completion zsh)
@@ -79,6 +81,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
+alias dc='docker-compose'
 
 eval "$(dircolors ~/.dir_colors/dircolors.256dark)"
 
