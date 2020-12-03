@@ -64,7 +64,6 @@ DOTFILES_DIR="${PWD}"
 
 # Start the symlink
 ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}/.zsh_private"
-ln -sf "${DOTFILES_DIR}/functions/prompt_garrett_setup" "${HOME}/.zprezto/modules/prompt/functions/prompt_garrett_setup"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
