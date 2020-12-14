@@ -3,6 +3,7 @@
 echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
+mkdir -p $WORKDIR
 export WORKDIR
 
 if [[ ! -d "${WORKDIR}" ]]; then
@@ -49,16 +50,6 @@ fi
 # Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
-# Install Flutter SDK
-if [[ ! -d "${WORKDIR}/flutter_sdk" ]]; then
-  echo "Cloning Flutter and setting up Dart"
-
-  git clone https://github.com/flutter/flutter.git -b stable "${WORKDIR}/flutter_sdk"
-
-  # symlink dart sdk to Flutter bin
-  ln -sf "${BREW_PREFIX}/opt/dart/libexec" "${WORKDIR}/flutter_sdk/bin/cache/dart-sdk"
-fi
-
 echo -e "Symlinking.. \U1F517"
 DOTFILES_DIR="${PWD}"
 
@@ -76,4 +67,3 @@ else
 fi
 
 echo -e "Finished bootstrapping.. \U1F3AD"
-# 
