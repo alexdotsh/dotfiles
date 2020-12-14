@@ -3,7 +3,6 @@
 echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
-mkdir -p $WORKDIR
 export WORKDIR
 
 if [[ ! -d "${WORKDIR}" ]]; then
@@ -46,9 +45,6 @@ if [[ ! -d "${HOME}/.vim" ]]; then
   # Install Plugins
   vim +PluginInstall +qall
 fi
-
-# Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
 
 echo -e "Symlinking.. \U1F517"
 DOTFILES_DIR="${PWD}"

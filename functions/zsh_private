@@ -37,11 +37,6 @@ autoload -U +X bashcompinit && bashcompinit
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Export flutter if the sdk exists
-if [[ -d "$WORKDIR/flutter_sdk" ]]; then
-  export PATH="$PATH:$WORKDIR/flutter_sdk/bin"
-fi
-
 # Adding GNU core utilities to `$PATH`.
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -52,19 +47,16 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/ssh-copy-id/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/qt/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="/usr/local/opt/qt/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
-export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/qt/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/qt/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
+export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
 
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/curl/lib/pkgconfig"
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/ruby/lib/pkgconfig"
 
 export EDITOR="vim"
@@ -85,11 +77,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias dc='docker-compose'
-
-# if [[ -d "/Applications/VMware Fusion.app" ]]; then
-#   alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun"
-#   # vmrun -T fusion start "/path/to/vm.vmx" nogui
-# fi
 
 eval "$(dircolors ~/.dir_colors/dircolors.256dark)"
 
