@@ -67,6 +67,10 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/curl/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/ruby/lib/pkgconfig"
 
+export EDITOR="vim"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME="Solarized (dark)"
+
 if [ $commands[kubectl] ]; then 
   source <(kubectl completion zsh)
   
@@ -80,11 +84,17 @@ alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias diff='diff --color=auto'
 alias dc='docker-compose'
+
+# if [[ -d "/Applications/VMware Fusion.app" ]]; then
+#   alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun"
+#   # vmrun -T fusion start "/path/to/vm.vmx" nogui
+# fi
 
 eval "$(dircolors ~/.dir_colors/dircolors.256dark)"
 
-export EDITOR="vim"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export BAT_THEME="Solarized (dark)"
+export GOPATH=/Users/alex/go
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOPATH/bin
+
+# codesign --remove-signature /Applications/Visual\ Studio\ Code.app/Contents/Frameworks/Code\ Helper\ \(Renderer\).app

@@ -33,23 +33,5 @@ brew 'zsh'
 brew 'zsh-syntax-highlighting'
 brew 'zsh-autosuggestions'
 
-## For emulators
-brew 'gtk+3'
-brew 'adwaita-icon-theme'
-brew 'qt5'
-
-# Cask install
-cask 'iterm2'
-cask 'visual-studio-code'
-cask 'docker'
-cask 'keybase'
-
-# Currently installed on the system
-# cask 'jetbrains-toolbox'
-# cask 'dashlane'
-
-# open -a XQuartz to use
-cask 'xquartz'
-
 # Java versions
 cask 'adoptopenjdk13'
