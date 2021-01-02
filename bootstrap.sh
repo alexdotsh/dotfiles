@@ -22,18 +22,16 @@ echo -e "Brewing..\U1F37A"
 # shellcheck disable=SC1091
 source brew.sh
 
-# Download Prezto and configure if not found
-if [[ ! -d "${HOME}/.zprezto" ]]; then
-  echo "Cloning prezto and initializing"
+# Setup pure
+if [[ ! -d "${HOME}/.zsh/pure" ]]; then
+  echo "Cloning pure"
 
-  # Install and configure default Prezto configuration framework
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${HOME}/.zprezto"
+  git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fi
 
-  # Run it on zsh shell		
-  /bin/zsh -c 'setopt EXTENDED_GLOB;		
-  for rcfile in "${HOME}"/.zprezto/runcoms/^README.md(.N); do		
-    ln -s "$rcfile" "${HOME}/.${rcfile:t}"		
-  done'
+if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then
+  mkdir -p "${HOME}/.dir_colors"
+  curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
 fi
 
 # Download Vundle if .vim directory is not found
