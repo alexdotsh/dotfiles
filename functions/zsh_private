@@ -53,6 +53,13 @@ jdk() {
   # `jdk 13` in the terminal
 }
 
+# enable completion
+autoload -Uz compinit; compinit -i
+
+zmodload -i zsh/complist
+
+autoload -U +X bashcompinit; bashcompinit
+
 if [ $commands[kubectl] ]; then 
   source <(kubectl completion zsh)
   
