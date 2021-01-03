@@ -1,5 +1,6 @@
 # Add tap
 tap 'AdoptOpenJDK/openjdk'
+tap 'homebrew/cask-fonts'
 
 # Binaries
 brew 'bash'
@@ -17,6 +18,7 @@ brew 'nmap'
 brew 'openssh'
 brew 'pwgen'
 brew 'ssh-copy-id'
+brew 'tcptraceroute'
 brew 'tree'
 brew 'tmux'
 brew 'vim'
@@ -30,3 +32,4 @@ brew 'zsh-autosuggestions'
 
 # Java versions
 cask 'adoptopenjdk13'
+cask 'font-fira-code'

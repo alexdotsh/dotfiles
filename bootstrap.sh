@@ -3,13 +3,7 @@
 echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
-export WORKDIR
-
-if [[ ! -d "${WORKDIR}" ]]; then
-  echo "Cloning dotfiles"
-
-  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${WORKDIR}/code"
-fi
+mkdir -p $WORKDIR
 
 # Check for Homebrew and then install if not found
 if /bin/test ! "$(which brew)"; then
