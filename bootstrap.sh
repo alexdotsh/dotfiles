@@ -30,7 +30,7 @@ source brew.sh
 if [[ ! -d "${HOME}/.zsh/pure" ]]; then
   echo "Cloning pure"
 
-  git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+  git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh"
 fi
 
 if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then

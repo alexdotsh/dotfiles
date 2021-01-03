@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-export WORKDIR="${HOME}/workspace"
-
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
@@ -69,7 +67,7 @@ jdk 13 &> /dev/null
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Pure prompt
-fpath+=$HOME/.zsh/pure
+fpath+=${HOME}/.zsh/pure
 
 autoload -U promptinit; promptinit
 
