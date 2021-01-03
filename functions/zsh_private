@@ -1,17 +1,6 @@
 #!/usr/bin/env zsh
 
-zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
-  
-# Switch between different JDK versions
-jdk() {
-  version=$1
-  JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-  export JAVA_HOME
-  java -version
-
-  # Can change version by running 
-  # `jdk 13` in the terminal
-}
+export WORKDIR="${HOME}/workspace"
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
@@ -21,18 +10,6 @@ export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
-
-# enable completion
-autoload -Uz compinit
-compinit
-
-zmodload -i zsh/complist
-
-autoload -U +X bashcompinit && bashcompinit
-
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#e60073'
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Adding GNU core utilities to `$PATH`.
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
@@ -50,22 +27,14 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
-export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
+export LDFLAGS="-L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
 
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/curl/lib/pkgconfig"
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/ruby/lib/pkgconfig"
 
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export BAT_THEME="Solarized (dark)"
-
-if [ $commands[kubectl] ]; then 
-  source <(kubectl completion zsh)
-  
-  alias k=kubectl
-  complete -F __start_kubectl k 
-fi
 
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
@@ -75,8 +44,36 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias dc='docker-compose'
 
-eval "$(dircolors ~/.dir_colors/dircolors.256dark)"
+# Switch between different JDK versions
+jdk() {
+  version=$1
+  JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+  export JAVA_HOME
+  java -version
+
+  # Can change version by running 
+  # `jdk 13` in the terminal
+}
+
+if [ $commands[kubectl] ]; then 
+  source <(kubectl completion zsh)
+  
+  alias k=kubectl
+  complete -F __start_kubectl k 
+fi
+
+eval "$(dircolors ${HOME}/.dir_colors/dircolors.256dark)"
 
 jdk 13 &> /dev/null
 
-# codesign --remove-signature /Applications/Visual\ Studio\ Code.app/Contents/Frameworks/Code\ Helper\ \(Renderer\).app
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Pure prompt
+fpath+=$HOME/.zsh/pure
+
+autoload -U promptinit; promptinit
+
+# change the path color
+zstyle :prompt:pure:path color white
+
+prompt pure

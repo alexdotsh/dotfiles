@@ -12,6 +12,7 @@ brew 'findutils'
 brew 'git'
 brew 'grep'
 brew 'helm'
+brew 'iproute2mac'
 brew 'kubectl'
 brew 'jq'
 brew 'nmap'
@@ -28,7 +29,6 @@ brew 'yq'
 
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
-brew 'zsh-autosuggestions'
 
 # Java versions
 cask 'adoptopenjdk13'

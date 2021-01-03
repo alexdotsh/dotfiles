@@ -3,7 +3,17 @@
 echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
-mkdir -p $WORKDIR
+export WORKDIR
+
+if [[ ! -d "${WORKDIR}" ]]; then
+  echo "Cloning dotfiles"
+
+  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${WORKDIR}/code"
+
+  pushd "${WORKDIR}/code/dotfiles"
+    git checkout slim
+  popd
+fi
 
 # Check for Homebrew and then install if not found
 if /bin/test ! "$(which brew)"; then
@@ -16,18 +26,16 @@ echo -e "Brewing..\U1F37A"
 # shellcheck disable=SC1091
 source brew.sh
 
-# Download Prezto and configure if not found
-if [[ ! -d "${HOME}/.zprezto" ]]; then
-  echo "Cloning prezto and initializing"
+# Setup pure
+if [[ ! -d "${HOME}/.zsh/pure" ]]; then
+  echo "Cloning pure"
 
-  # Install and configure default Prezto configuration framework
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${HOME}/.zprezto"
+  git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+fi
 
-  # Run it on zsh shell		
-  /bin/zsh -c 'setopt EXTENDED_GLOB;		
-  for rcfile in "${HOME}"/.zprezto/runcoms/^README.md(.N); do		
-    ln -s "$rcfile" "${HOME}/.${rcfile:t}"		
-  done'
+if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then
+  mkdir -p "${HOME}/.dir_colors"
+  curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
 fi
 
 # Download Vundle if .vim directory is not found
@@ -41,13 +49,17 @@ if [[ ! -d "${HOME}/.vim" ]]; then
 fi
 
 echo -e "Symlinking.. \U1F517"
-DOTFILES_DIR="${PWD}"
+DOTFILES_DIR="${WORKDIR}/code/dotfiles"
 
 # Start the symlink
 ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}/.zsh_private"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
+
+if [[ ! -f "${HOME}/.zshrc" ]]; then
+  touch "${HOME}/.zshrc"
+fi
 
 if grep -Fxq "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" "${HOME}/.zshrc"
 then
