@@ -17,5 +17,5 @@ curl https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/<branch>/bootst
 
 chmod +x bootstrap.sh
 
-./bootstrap.sh
+./bootstrap.sh <branch>
 ```
