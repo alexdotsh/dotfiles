@@ -24,6 +24,7 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/3.*/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
 export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
