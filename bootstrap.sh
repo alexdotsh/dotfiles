@@ -3,12 +3,16 @@
 echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
-export WORKDIR
+BRANCH=$1
 
 if [[ ! -d "${WORKDIR}" ]]; then
   echo "Cloning dotfiles"
 
-  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${WORKDIR}/code"
+  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${WORKDIR}/code/dotfiles"
+
+  pushd "${WORKDIR}/code/dotfiles"
+    git checkout "${BRANCH:-slim}"
+  popd
 fi
 
 # Check for Homebrew and then install if not found
@@ -30,6 +34,8 @@ if [[ ! -d "${HOME}/.zsh/pure" ]]; then
 fi
 
 if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then
+  echo "Downloading dircolors.256dark"
+
   mkdir -p "${HOME}/.dir_colors"
   curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
 fi
@@ -58,13 +64,17 @@ if [[ ! -d "${WORKDIR}/flutter_sdk" ]]; then
 fi
 
 echo -e "Symlinking.. \U1F517"
-DOTFILES_DIR="${PWD}"
+DOTFILES_DIR="${WORKDIR}/code/dotfiles"
 
 # Start the symlink
 ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}/.zsh_private"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
+
+if [[ ! -f "${HOME}/.zshrc" ]]; then
+  touch "${HOME}/.zshrc"
+fi
 
 if grep -Fxq "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" "${HOME}/.zshrc"
 then
@@ -74,4 +84,3 @@ else
 fi
 
 echo -e "Finished bootstrapping.. \U1F3AD"
-# 
