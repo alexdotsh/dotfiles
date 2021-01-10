@@ -3,6 +3,7 @@
 echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
+BRANCH=$1
 
 if [[ ! -d "${WORKDIR}" ]]; then
   echo "Cloning dotfiles"
@@ -10,7 +11,7 @@ if [[ ! -d "${WORKDIR}" ]]; then
   git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${WORKDIR}/code/dotfiles"
 
   pushd "${WORKDIR}/code/dotfiles"
-    git checkout slim
+    git checkout "${BRANCH:-slim}"
   popd
 fi
 
@@ -34,6 +35,7 @@ fi
 
 if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then
   echo "Downloading dircolors.256dark"
+
   mkdir -p "${HOME}/.dir_colors"
   curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
 fi
