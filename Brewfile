@@ -2,6 +2,7 @@
 tap 'AdoptOpenJDK/openjdk'
 tap 'dart-lang/dart'
 tap 'homebrew/cask-fonts'
+tap 'dty1er/tap'
 
 # Binaries
 brew 'bash'
@@ -17,6 +18,7 @@ brew 'grep'
 brew 'helm'
 brew 'iproute2mac'
 brew 'kubectl'
+brew 'kubecolor'
 brew 'jq'
 brew 'node@14'
 brew 'nmap'
