@@ -25,6 +25,7 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/3.*/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Set LDFLAGS and CPPFLAGS flags
 export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
@@ -43,6 +44,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias dc='docker-compose'
+alias hm='helm'
+alias gco='git checkout'
+alias gf='git diff'
+alias gcm='git commit'
+alias gp='git push origin HEAD'
 
 # Switch between different JDK versions
 jdk() {
@@ -87,3 +93,5 @@ autoload -U promptinit; promptinit
 zstyle :prompt:pure:path color white
 
 prompt pure
+
+set -o emacs
