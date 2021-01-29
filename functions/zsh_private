@@ -101,3 +101,5 @@ autoload -U promptinit; promptinit
 zstyle :prompt:pure:path color white
 
 prompt pure
+
+set -o emacs
