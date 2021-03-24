@@ -1,6 +1,7 @@
 # Add tap
 tap 'AdoptOpenJDK/openjdk'
 tap 'homebrew/cask-fonts'
+tap 'dty1er/tap'
 
 # Binaries
 brew 'bash'
