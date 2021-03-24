@@ -4,13 +4,14 @@ echo -e "Start bootstrapping.. \U1F3C1"
 
 WORKDIR="${HOME}/workspace"
 BRANCH=$1
+DOTFILES_DIR="${WORKDIR}/code/dotfiles"
 
 if [[ ! -d "${WORKDIR}" ]]; then
   echo "Cloning dotfiles"
 
-  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${WORKDIR}/code/dotfiles"
+  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
 
-  pushd "${WORKDIR}/code/dotfiles"
+  pushd "${DOTFILES_DIR}"
     git checkout "${BRANCH:-slim}"
   popd
 fi
@@ -23,14 +24,16 @@ if /bin/test ! "$(which brew)"; then
 fi
 
 echo -e "Brewing..\U1F37A"
-# shellcheck disable=SC1091
-source brew.sh
+
+pushd "${DOTFILES_DIR}"
+  source brew.sh
+popd
 
 # Setup pure
 if [[ ! -d "${HOME}/.zsh/pure" ]]; then
   echo "Cloning pure"
 
-  git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+  git clone https://github.com/sindresorhus/pure.git "${HOME}/.zsh/pure"
 fi
 
 if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then
@@ -64,7 +67,6 @@ if [[ ! -d "${WORKDIR}/flutter_sdk" ]]; then
 fi
 
 echo -e "Symlinking.. \U1F517"
-DOTFILES_DIR="${WORKDIR}/code/dotfiles"
 
 # Start the symlink
 ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}/.zsh_private"
