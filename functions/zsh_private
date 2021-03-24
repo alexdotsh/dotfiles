@@ -39,7 +39,7 @@ export BAT_THEME="Solarized (dark)"
 
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
-alias ls='ls --color=auto --group-directories-first'
+alias ls='ls -la --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -49,6 +49,7 @@ alias gco='git checkout'
 alias gf='git diff'
 alias gcm='git commit'
 alias gp='git push origin HEAD'
+alias gs='git status'
 
 # Switch between different JDK versions
 jdk() {
@@ -73,6 +74,7 @@ if [ $commands[kubectl] ]; then
   
   alias k="kubecolor"
   alias kubectl="kubecolor"
+  alias kg='kubectl get'
   complete -F __start_kubectl k
   complete -o default -F __start_kubectl kubecolor
   complete -o default -F __start_kubectl k
