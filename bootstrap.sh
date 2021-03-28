@@ -24,7 +24,7 @@ if /bin/test ! "$(which brew)"; then
 fi
 
 echo -e "Brewing..\U1F37A"
-# shellcheck disable=SC1091
+
 pushd "${DOTFILES_DIR}"
   source brew.sh
 popd
