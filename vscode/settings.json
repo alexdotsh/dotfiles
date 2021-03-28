@@ -30,6 +30,7 @@
     "terminal.integrated.fontFamily": "FiraCode-Retina",
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.lineHeight": 1.3,
+    "terminal.integrated.copyOnSelection": true,
     "workbench.activityBar.visible": false,
     "extensions.ignoreRecommendations": true
 }
