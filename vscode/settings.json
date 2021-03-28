@@ -1,0 +1,36 @@
+{
+  "files.autoSave": "afterDelay",
+  "workbench.sideBar.location": "right",
+  "editor.fontSize": 16.5,
+  "terminal.integrated.fontSize": 13,
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Solarized Dark",
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "workbench.colorCustomizations": {
+      
+      "terminal.foreground" : "#839496",
+      "terminal.background" : "#002b36"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[yaml]": {
+  "editor.insertSpaces": true,
+  "editor.autoIndent": "none"
+  },
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": true,
+  "window.openFoldersInNewWindow": "on",
+  "terminal.integrated.automationShell.osx": "",
+  "editor.fontWeight": "400",
+  "editor.tabSize": 2,
+  "editor.accessibilitySupport": "off",
+  "workbench.editor.wrapTabs": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.explorerKind": "integrated",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.fontFamily": "FiraCode-Retina",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.lineHeight": 1.3,
+  "workbench.activityBar.visible": false,
+  "extensions.ignoreRecommendations": true
+}
