@@ -12,7 +12,7 @@ if [[ ! -d "${WORKDIR}" ]]; then
   git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
 
   pushd "${DOTFILES_DIR}"
-    git checkout "${BRANCH:-slim}"
+    git checkout "${BRANCH:-master}"
   popd
 fi
 
