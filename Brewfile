@@ -36,11 +36,13 @@ brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
 cask 'adoptopenjdk13'
+cask 'devbook'
+cask 'firefox-developer-edition', language: 'en-GB'
 cask 'font-fira-code'
+cask 'iterm2'
+cask 'numi'
 cask 'obsidian'
 cask 'visual-studio-code'
-cask 'iterm2'
-cask 'firefox-developer-edition', language: 'en-GB'
 
 mas 'Amphetamine', id: 937984704
 mas 'Bitwarden', id: 1352778147
