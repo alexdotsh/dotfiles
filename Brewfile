@@ -45,4 +45,4 @@ cask 'numi'
 cask 'obsidian'
 cask 'visual-studio-code'
 
-mas 'Amphetamine', id: 937984704
+# mas 'Amphetamine', id: 937984704
