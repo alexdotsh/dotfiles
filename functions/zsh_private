@@ -52,15 +52,15 @@ alias gp='git push origin HEAD'
 alias gs='git status'
 
 # Switch between different JDK versions
-jdk() {
-  version=$1
-  JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-  export JAVA_HOME
-  java -version
+# jdk() {
+#   version=$1
+#   JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+#   export JAVA_HOME
+#   java -version
 
-  # Can change version by running 
-  # `jdk 13` in the terminal
-}
+#   # Can change version by running
+#   # `jdk 13` in the terminal
+# }
 
 # enable completion
 autoload -Uz compinit; compinit -i
@@ -75,6 +75,7 @@ if [ $commands[kubectl] ]; then
   alias k="kubecolor"
   alias kubectl="kubecolor"
   alias kg='kubectl get'
+  alias kd='kubectl describe'
   complete -F __start_kubectl k
   complete -o default -F __start_kubectl kubecolor
   complete -o default -F __start_kubectl k
@@ -82,7 +83,7 @@ fi
 
 eval "$(dircolors ${HOME}/.dir_colors/dircolors.256dark)"
 
-jdk 13 &> /dev/null
+# jdk 13 &> /dev/null
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
