@@ -13,9 +13,9 @@ xcode-select --install
 ```
 
 ```bash
-curl https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/<branch>/bootstrap.sh -O
+curl https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/bootstrap.sh -O
 
 chmod +x bootstrap.sh
 
-./bootstrap.sh <branch>
+sudo ./bootstrap.sh
 ```
