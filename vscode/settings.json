@@ -32,5 +32,6 @@
     "terminal.integrated.lineHeight": 1.3,
     "terminal.integrated.copyOnSelection": true,
     "workbench.activityBar.visible": false,
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "workbench.iconTheme": "material-icon-theme"
 }
