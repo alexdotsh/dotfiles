@@ -37,6 +37,14 @@ export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export BAT_THEME="Solarized (dark)"
 
+# configure history
+export HISTFILE="/Users/${USER}/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt EXTENDED_HISTORY
+
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
 alias ls='ls -la --color=auto --group-directories-first'
@@ -50,6 +58,7 @@ alias gf='git diff'
 alias gcm='git commit'
 alias gp='git push origin HEAD'
 alias gs='git status'
+alias history='history 1'
 
 # Switch between different JDK versions
 # jdk() {
