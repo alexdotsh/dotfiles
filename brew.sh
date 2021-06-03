@@ -11,6 +11,3 @@ brew bundle
 
 # Cleanup outdated versions from Cellar
 brew cleanup
-
-# Mas upgrade
-mas upgrade

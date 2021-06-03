@@ -60,6 +60,7 @@ ln -sf "${DOTFILES_DIR}/functions/zsh_private" "${HOME}/.zsh_private"
 ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
+touch "${HOME}/Library/Application Support/Code/User/settings.json"
 ln -sf "${DOTFILES_DIR}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 
 if [[ ! -f "${HOME}/.zshrc" ]]; then
