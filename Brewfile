@@ -1,5 +1,3 @@
-# Add tap
-# tap 'AdoptOpenJDK/openjdk'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'dty1er/tap'
@@ -36,7 +34,6 @@ brew 'yq'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
-# cask 'adoptopenjdk13'
 cask 'bitwarden'
 cask 'firefox-developer-edition', language: 'en-GB'
 cask 'font-fira-code'
