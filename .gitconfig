@@ -1,26 +1,27 @@
 [color]
-    ui = auto
-    pager = true
-    interactive = auto
+	ui = auto
+	pager = true
+	interactive = auto
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = cyan
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = cyan
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 [user]
-    name = Alex Mirkhaydarov
-    email = alex.mirkhaydarov@gmail.com
+	name = Alex Mirkhaydarov
+	email = alex.mirkhaydarov@gmail.com
 [core]
-    editor = vim
+	editor = vim
+	pager = cat
 [push]
-    default = matching
+	default = matching
 [init]
 	defaultBranch = master
