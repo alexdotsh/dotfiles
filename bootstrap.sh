@@ -63,7 +63,11 @@ ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 if [[ ! -f "${HOME}/Library/Application Support/Code/User/settings.json" ]]; then
   touch "${HOME}/Library/Application Support/Code/User/settings.json"
 fi
+if [[ ! -f "${HOME}/Library/Application Support/Code/User/keybindings.json" ]]; then
+  touch "${HOME}/Library/Application Support/Code/User/keybindings.json"
+fi
 ln -sf "${DOTFILES_DIR}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+ln -sf "${DOTFILES_DIR}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 if [[ ! -f "${HOME}/.zshrc" ]]; then
   touch "${HOME}/.zshrc"
