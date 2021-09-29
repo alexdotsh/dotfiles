@@ -15,17 +15,15 @@ syntax on
 
 set t_Co=256
 set incsearch
-set number relativenumber
+set number
 set nocompatible
-set history=200
+set history=10000
 set shiftwidth=2
 set backspace=2
 set laststatus=2
 set tabstop=2
 set expandtab
-
 set cursorline
-set cursorcolumn
 set ruler
 
 syntax enable

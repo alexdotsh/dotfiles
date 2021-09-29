@@ -20,7 +20,7 @@
 	email = alex.mirkhaydarov@gmail.com
 [core]
 	editor = vim
-	pager = cat
+	pager = less
 [push]
 	default = matching
 [init]
