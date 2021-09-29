@@ -26,7 +26,6 @@ set expandtab
 
 set cursorline
 set cursorcolumn
-set colorcolumn=100
 set ruler
 
 syntax enable
