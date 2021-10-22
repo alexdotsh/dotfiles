@@ -1,17 +1,6 @@
 filetype off
-
-" Vundle config
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-
-call vundle#end()
-
 filetype plugin indent on
-
-syntax on
+syntax enable
 
 set t_Co=256
 set incsearch
@@ -25,14 +14,6 @@ set tabstop=2
 set expandtab
 set cursorline
 set ruler
-
-syntax enable
-set background=dark
-let g:solarized_termtrans = 1
-try
-  colorscheme solarized
-  catch
-endtry
 
 let mapleader = "\<Space>"
 
