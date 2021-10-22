@@ -38,5 +38,14 @@
     "[markdown]": {
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": false,
+        "tf": true,
+        "json": true
     }
 }
