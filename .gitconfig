@@ -17,7 +17,7 @@
 	untracked = cyan
 [user]
 	name = Alex Mirkhaydarov
-	email = alex.mirkhaydarov@gmail.com
+	email = icommit@alexdot.sh
 [core]
 	editor = vim
 	pager = less
