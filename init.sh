@@ -7,4 +7,6 @@ if [[ ! -d "${WORKDIR}" ]]; then
   echo "Cloning dotfiles"
 
   git clone --depth 1 https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
+
+  "${DOTFILES_DIR}"/bootstrap.sh
 fi
