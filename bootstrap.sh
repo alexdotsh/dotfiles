@@ -5,13 +5,6 @@ DOTFILES_DIR="${WORKDIR}/code/dotfiles"
 
 echo -e "Start bootstrapping.. \U1F3C1"
 
-# Check for Homebrew and then install if not found
-if /bin/test ! "$(which brew)"; then
-  echo "Installing Homebrew"
-
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
-
 echo -e "Brewing..\U1F37A"
 
 source brew.sh
@@ -28,16 +21,6 @@ if [[ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]]; then
 
   mkdir -p "${HOME}/.dir_colors"
   curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
-fi
-
-# Download Vundle if .vim directory is not found
-if [[ ! -d "${HOME}/.vim" ]]; then
-  echo "Cloning Vundle and installing plugins"
-
-  git clone https://github.com/VundleVim/Vundle.vim.git "${HOME}/.vim/bundle/Vundle.vim"
-
-  # Install Plugins
-  vim +PluginInstall +qall
 fi
 
 echo -e "Symlinking.. \U1F517"

@@ -4,9 +4,16 @@ WORKDIR="${HOME}/workspace"
 DOTFILES_DIR="${WORKDIR}/code/dotfiles"
 
 if [[ ! -d "${WORKDIR}" ]]; then
-  echo "Cloning dotfiles"
+    echo "Cloning dotfiles"
 
-  git clone --depth 1 https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
+    git clone --depth 1 https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
 
-  "${DOTFILES_DIR}"/bootstrap.sh
+    # Check for Homebrew and then install if not found
+    if /bin/test ! "$(which brew)"; then
+        echo "Installing Homebrew"
+
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    "${DOTFILES_DIR}"/bootstrap.sh
 fi
