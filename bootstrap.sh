@@ -2,20 +2,6 @@
 
 echo -e "Start bootstrapping.. \U1F3C1"
 
-WORKDIR="${HOME}/workspace"
-BRANCH=$1
-DOTFILES_DIR="${WORKDIR}/code/dotfiles"
-
-if [[ ! -d "${WORKDIR}" ]]; then
-  echo "Cloning dotfiles"
-
-  git clone --recursive https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
-
-  pushd "${DOTFILES_DIR}"
-    git checkout "${BRANCH:-master}"
-  popd
-fi
-
 # Check for Homebrew and then install if not found
 if /bin/test ! "$(which brew)"; then
   echo "Installing Homebrew"
