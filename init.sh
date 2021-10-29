@@ -12,8 +12,6 @@ if [[ ! -d "${WORKDIR}" ]]; then
     if /bin/test ! "$(which brew)"; then
         echo "Installing Homebrew"
 
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && "${DOTFILES_DIR}"/bootstrap.sh
     fi
-
-    "${DOTFILES_DIR}"/bootstrap.sh
 fi
