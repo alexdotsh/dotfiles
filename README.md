@@ -13,5 +13,5 @@ xcode-select --install
 ```
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/init.sh | bash
+curl -fsSL https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/init.sh -O init.sh
 ```
