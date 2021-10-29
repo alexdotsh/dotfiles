@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+WORKDIR="${HOME}/workspace"
+DOTFILES_DIR="${WORKDIR}/code/dotfiles"
+
 echo -e "Start bootstrapping.. \U1F3C1"
 
 # Check for Homebrew and then install if not found
@@ -11,9 +14,7 @@ fi
 
 echo -e "Brewing..\U1F37A"
 
-pushd "${DOTFILES_DIR}"
-  source brew.sh
-popd
+source brew.sh
 
 # Setup pure
 if [[ ! -d "${HOME}/.zsh/pure" ]]; then
