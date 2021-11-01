@@ -5,6 +5,7 @@ tap 'dty1er/tap'
 # Binaries
 brew 'bash'
 brew 'bat'
+brew 'bitwarden-cli'
 brew 'coreutils'
 brew 'curl'
 brew 'cmake'
