@@ -22,10 +22,12 @@ export BAT_THEME="Solarized (dark)"
 
 # configure history
 export HISTFILE="/Users/${USER}/.zsh_history"
-export HISTSIZE=10000
-export SAVEHIST=10000
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="%d/%m/%y %T"
 setopt SHARE_HISTORY
-setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 setopt EXTENDED_HISTORY
 
 command -v bat > /dev/null && alias cat='bat --pager=never'
