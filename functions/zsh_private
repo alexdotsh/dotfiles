@@ -32,7 +32,7 @@ setopt EXTENDED_HISTORY
 
 command -v bat > /dev/null && alias cat='bat --pager=never'
 command -v bat > /dev/null && alias less='bat'
-alias ls='ls -la --color=auto --group-directories-first'
+alias ls='gls -la --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -49,9 +49,9 @@ alias kubectl="kubecolor"
 alias kg='kubectl get'
 alias kd='kubectl describe'
 
-eval "$(dircolors ${HOME}/.dir_colors/dircolors.256dark)"
+eval "$(gdircolors ${HOME}/.dir_colors/dircolors.256dark)"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Pure prompt
 fpath+=${HOME}/.zsh/pure
