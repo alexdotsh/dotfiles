@@ -28,6 +28,7 @@
     "terminal.explorerKind": "integrated",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.fontFamily": "'Fira Code'",
+    "terminal.integrated.fontWeight": "450",
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.lineHeight": 1.3,
     "terminal.integrated.copyOnSelection": true,

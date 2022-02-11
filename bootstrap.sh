@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 WORKDIR="${HOME}/workspace"
-DOTFILES_DIR="${WORKDIR}/code/dotfiles"
+DOTFILES_DIR="${WORKDIR}/code/projects/alexdotsh/dotfiles"
 
 echo -e "Start bootstrapping.. \U1F3C1"
 
@@ -32,16 +32,17 @@ ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 
 "${HOMEBREW_PREFIX}"/bin/code && sleep 5
-if [[ ! -f "${HOME}/Library/Application Support/Code/User/settings.json" ]]; then
-  touch "${HOME}/Library/Application Support/Code/User/settings.json"
+
+if [[ ! -f "${HOME}"/Library/Application\ Support/Code/User/settings.json ]]; then
+  touch "${HOME}"/Library/Application\ Support/Code/User/settings.json
 fi
 
-if [[ ! -f "${HOME}/Library/Application Support/Code/User/keybindings.json" ]]; then
-  touch "${HOME}/Library/Application Support/Code/User/keybindings.json"
+if [[ ! -f "${HOME}"/Library/Application\ Support/Code/User/keybindings.json ]]; then
+  touch "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
 fi
 
-ln -sf "${DOTFILES_DIR}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
-ln -sf "${DOTFILES_DIR}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
+ln -sf "${DOTFILES_DIR}/vscode/settings.json" "${HOME}"/Library/Application\ Support/Code/User/settings.json
+ln -sf "${DOTFILES_DIR}/vscode/keybindings.json" "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
 
 if [[ ! -f "${HOME}/.zshrc" ]]; then
   touch "${HOME}/.zshrc"
