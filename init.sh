@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 WORKDIR="${HOME}/workspace"
-DOTFILES_DIR="${WORKDIR}/code/dotfiles"
+DOTFILES_DIR="${WORKDIR}/code/projects/alexdotsh/dotfiles"
 
 if [[ ! -d "${WORKDIR}" ]]; then
     echo "Cloning dotfiles"
