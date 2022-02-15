@@ -7,7 +7,7 @@ echo -e "Start bootstrapping.. \U1F3C1"
 
 echo -e "Brewing..\U1F37A"
 
-source brew.sh
+source "${PWD}/brew.sh"
 
 # Setup pure
 if [[ ! -d "${HOME}/.zsh/pure" ]]; then
@@ -31,7 +31,7 @@ ln -sf "${DOTFILES_DIR}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${DOTFILES_DIR}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 
-"${HOMEBREW_PREFIX}"/bin/code && sleep 5
+"${HOMEBREW_PREFIX}/bin/code" && sleep 5
 
 if [[ ! -f "${HOME}"/Library/Application\ Support/Code/User/settings.json ]]; then
   touch "${HOME}"/Library/Application\ Support/Code/User/settings.json

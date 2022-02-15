@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Update brew itself
 brew update
 
