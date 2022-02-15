@@ -13,5 +13,10 @@ fi
 if /bin/test ! "$(which brew)"; then
     echo "Installing Homebrew"
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && "${DOTFILES_DIR}"/bootstrap.sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "${HOME}/.zprofile"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    "${DOTFILES_DIR}"/bootstrap.sh
 fi
