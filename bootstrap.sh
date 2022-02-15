@@ -7,7 +7,7 @@ echo -e "Start bootstrapping.. \U1F3C1"
 
 echo -e "Brewing..\U1F37A"
 
-source "${PWD}/brew.sh"
+source "${DOTFILES_DIR}/brew.sh"
 
 # Setup pure
 if [[ ! -d "${HOME}/.zsh/pure" ]]; then
