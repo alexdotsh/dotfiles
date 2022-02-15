@@ -18,5 +18,14 @@ if /bin/test ! "$(which brew)"; then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "${HOME}/.zprofile"
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
-    "${DOTFILES_DIR}"/bootstrap.sh
+    brew --help
+
+    if [ $? -ne 0 ]; then
+        exit 1
+        echo "brew not installed or not in PATH"
+    fi
+
+    pushd "${DOTFILES_DIR}"
+        ./bootstrap.sh
+    popd
 fi
