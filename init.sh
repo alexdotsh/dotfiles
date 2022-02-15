@@ -13,5 +13,5 @@ fi
 if /bin/test ! "$(which brew)"; then
     echo "Installing Homebrew"
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && "${DOTFILES_DIR}"/bootstrap.sh
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && "${DOTFILES_DIR}"/bootstrap.sh
 fi
