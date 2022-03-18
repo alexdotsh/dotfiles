@@ -44,6 +44,5 @@
     "security.workspace.trust.untrustedFiles": "newWindow",
     "workbench.editor.untitled.hint": "hidden",
     "editor.bracketPairColorization.enabled": true,
-    "editor.inlineSuggest.enabled": true,
-    "window.zoomLevel": 1
+    "editor.inlineSuggest.enabled": true
 }
