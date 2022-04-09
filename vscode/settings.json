@@ -45,5 +45,6 @@
     "workbench.editor.untitled.hint": "hidden",
     "editor.bracketPairColorization.enabled": true,
     "editor.inlineSuggest.enabled": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "telemetry.telemetryLevel": "off"
 }
