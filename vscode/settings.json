@@ -1,6 +1,5 @@
 {
     "files.autoSave": "afterDelay",
-    "workbench.sideBar.location": "right",
     "editor.fontSize": 16.5,
     "terminal.integrated.fontSize": 14.5,
     "workbench.startupEditor": "none",
@@ -21,11 +20,9 @@
     "window.openFoldersInNewWindow": "on",
     "terminal.integrated.automationShell.osx": "",
     "editor.fontWeight": "450",
-    "editor.tabSize": 2,
     "editor.accessibilitySupport": "off",
     "workbench.editor.wrapTabs": true,
     "terminal.external.osxExec": "iTerm.app",
-    "terminal.explorerKind": "integrated",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.fontFamily": "'Fira Code'",
     "terminal.integrated.fontWeight": "500",
@@ -35,7 +32,6 @@
     "terminal.integrated.scrollback": 9999,
     "workbench.activityBar.visible": false,
     "extensions.ignoreRecommendations": true,
-    "workbench.iconTheme": "material-icon-theme",
     "markdown.preview.fontSize": 16,
     "[markdown]": {
         "editor.wordWrap": "on",
@@ -46,5 +42,10 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.inlineSuggest.enabled": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "editor.tabSize": 2,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.codeLensFontFamily": "'Fira Code'",
+    "terminal.explorerKind": "external",
+    "workbench.sideBar.location": "right"
 }
