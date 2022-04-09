@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-WORKDIR="${HOME}/workspace"
-DOTFILES_DIR="${WORKDIR}/code/projects/alexdotsh/dotfiles"
+set -euo pipefail
 
-if [[ ! -d "${WORKDIR}" ]]; then
+DOTFILES_DIR="${HOME}/.dotfiles"
+
+if [ ! -d "${DOTFILES_DIR}" ]; then
     echo "Cloning dotfiles"
 
-    git clone --depth 1 https://github.com/alexmirkhaydarov/dotfiles.git "${DOTFILES_DIR}"
+    git clone --depth 1 https://github.com/alexdotsh/dotfiles.git "${DOTFILES_DIR}"
 fi
 
 # Check for Homebrew and then install if not found
-if /bin/test ! "$(which brew)"; then
+if ! which brew 2>&1 > /dev/null; then
     echo "Installing Homebrew"
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -24,8 +25,8 @@ if /bin/test ! "$(which brew)"; then
         exit 1
         echo "brew not installed or not in PATH"
     fi
-
-    pushd "${DOTFILES_DIR}"
-        ./bootstrap.sh
-    popd
 fi
+
+pushd "${DOTFILES_DIR}"
+    ./bootstrap.sh
+popd

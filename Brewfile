@@ -1,6 +1,6 @@
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
-tap 'dty1er/tap'
+tap 'jjuarez/tap-1'
 
 # Binaries
 brew 'bash'

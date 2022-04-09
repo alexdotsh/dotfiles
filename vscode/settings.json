@@ -44,5 +44,6 @@
     "security.workspace.trust.untrustedFiles": "newWindow",
     "workbench.editor.untitled.hint": "hidden",
     "editor.bracketPairColorization.enabled": true,
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false
 }
