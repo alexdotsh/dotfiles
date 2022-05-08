@@ -30,3 +30,5 @@ fi
 pushd "${DOTFILES_DIR}"
     ./bootstrap.sh
 popd
+
+rm -rf "${HOME}/init"
