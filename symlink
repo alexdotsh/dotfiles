@@ -10,7 +10,11 @@ ln -sf "${PWD}/.vimrc" "${HOME}/.vimrc"
 ln -sf "${PWD}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${PWD}/.gitconfig" "${HOME}/.gitconfig"
 
-"${HOMEBREW_PREFIX}/bin/code" && sleep 5
+if [[ $(uname -m) == 'arm64' ]]; then
+    "${HOMEBREW_PREFIX}/bin/code" && sleep 5
+else
+    /usr/local/bin/code && sleep 5
+fi
 
 if [ ! -f "${HOME}"/Library/Application\ Support/Code/User/settings.json ]; then
     touch "${HOME}"/Library/Application\ Support/Code/User/settings.json
