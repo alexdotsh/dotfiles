@@ -54,7 +54,7 @@ eval "$(gdircolors ${HOME}/.dir_colors/dircolors.256dark)"
 if [[ $(uname -m) == 'arm64' ]]; then
     source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 else
-    /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # Pure prompt
