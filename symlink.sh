@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-DOTFILES_DIR="${HOME}/.dotfiles"
-
 echo -e "Symlinking.. \U1F517"
 
 # Start the symlink

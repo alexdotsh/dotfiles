@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-DOTFILES_DIR="${HOME}/.dotfiles"
+DOTFILES_DIR="${HOME}/workspace/projects/alexdotsh/code/.dotfiles"
 
 if [ ! -d "${DOTFILES_DIR}" ]; then
     echo "Cloning dotfiles"
