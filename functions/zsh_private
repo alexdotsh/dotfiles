@@ -66,4 +66,4 @@ prompt pure
 set -o emacs
 
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-source "${HOME}"/.cargo/env
+# source "${HOME}"/.cargo/env
