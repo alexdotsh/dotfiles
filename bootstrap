@@ -6,7 +6,7 @@ echo -e "Start bootstrapping \U1F3C1\U1F3C1\U1F3C1"
 
 echo -e "Brewing..\U1F37A\U1F37A\U1F37A"
 
-source "$(dirname "${BASH_SOURCE[0]}")/brew.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/brew"
 
 # Setup pure
 if [ ! -d "${HOME}/.zsh/pure" ]; then
@@ -22,6 +22,6 @@ if [ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]; then
     curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
 fi
 
-source "$(dirname "${BASH_SOURCE[0]}")/symlink.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/symlink"
 
 echo -e "Finished bootstrapping \U1F3AD\U1F3AD\U1F3AD"
