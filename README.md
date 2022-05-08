@@ -13,7 +13,7 @@ xcode-select --install
 ```
 
 ```bash
-curl https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/master/init.sh -O && \
+curl https://raw.githubusercontent.com/alexmirkhaydarov/dotfiles/main/init.sh -O && \
 chmod +x init.sh && \
 ./init.sh
 ```
