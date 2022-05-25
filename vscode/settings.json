@@ -45,5 +45,6 @@
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "editor.codeLensFontFamily": "'Fira Code'",
     "terminal.explorerKind": "external",
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "redhat.telemetry.enabled": false
 }
