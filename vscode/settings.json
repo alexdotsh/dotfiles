@@ -33,7 +33,11 @@
     "markdown.preview.fontSize": 16,
     "[markdown]": {
         "editor.wordWrap": "on",
-        "editor.quickSuggestions": false
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
     },
     "security.workspace.trust.untrustedFiles": "newWindow",
     "workbench.editor.untitled.hint": "hidden",
@@ -46,5 +50,6 @@
     "editor.codeLensFontFamily": "'Fira Code'",
     "terminal.explorerKind": "external",
     "workbench.sideBar.location": "right",
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "git.autofetch": true
 }
