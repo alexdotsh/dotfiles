@@ -51,5 +51,7 @@
     "terminal.explorerKind": "external",
     "workbench.sideBar.location": "right",
     "redhat.telemetry.enabled": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "workbench.statusBar.visible": false,
+    "window.zoomLevel": 1
 }
