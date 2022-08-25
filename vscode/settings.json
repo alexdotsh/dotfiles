@@ -44,6 +44,8 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.inlineSuggest.enabled": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
     "telemetry.telemetryLevel": "off",
     "editor.tabSize": 2,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
