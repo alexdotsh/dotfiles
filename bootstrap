@@ -25,5 +25,3 @@ fi
 source "$(dirname "${BASH_SOURCE[0]}")/symlink"
 
 echo -e "Finished bootstrapping \U1F3AD\U1F3AD\U1F3AD"
-
-# test 4
