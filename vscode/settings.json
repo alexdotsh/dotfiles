@@ -54,5 +54,6 @@
     "workbench.sideBar.location": "right",
     "redhat.telemetry.enabled": false,
     "git.autofetch": true,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 2,
+    "vscode_custom_css.imports": ["file:///Users/alex/vscode-custom/sidebar.css"]
 }
