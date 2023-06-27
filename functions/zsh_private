@@ -36,14 +36,15 @@ alias ls='gls -la --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias dc='docker-compose'
+alias history='history 1'
 alias hm='helm'
 alias gco='git checkout'
 alias gf='git diff'
 alias gcm='git commit'
 alias gp='git push origin HEAD'
 alias gs='git status'
-alias history='history 1'
+alias gcm='git checkout'
+alias gpom='git pull origin'
 alias k="kubecolor"
 alias kubectl="kubecolor"
 alias kg='kubectl get'
@@ -76,3 +77,5 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 alias base64=gbase64
 alias sed=gsed
 alias tf=terraform
+alias tfp="tf plan"
+alias tfa="tf apply"
