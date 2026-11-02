@@ -28,7 +28,6 @@
     "terminal.integrated.lineHeight": 1.4,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.scrollback": 9999,
-    "workbench.activityBar.visible": false,
     "extensions.ignoreRecommendations": true,
     "markdown.preview.fontSize": 16,
     "[markdown]": {
@@ -38,6 +37,11 @@
             "strings": "off",
             "other": "off"
         }
+    },
+    "[terraform]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.tabSize": 2
     },
     "security.workspace.trust.untrustedFiles": "newWindow",
     "workbench.editor.untitled.hint": "hidden",
@@ -57,5 +61,8 @@
     "vscode_custom_css.imports": [
         "file:///Users/alex/vscode-custom/sidebar.css"
     ],
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "workbench.activityBar.location": "hidden",
+    "chat.disableAIFeatures": true,
+    "terminal.integrated.initialHint": false
 }

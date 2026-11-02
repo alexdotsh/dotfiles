@@ -1,7 +1,3 @@
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'jjuarez/tap-1'
-
 # Binaries
 brew 'awk'
 brew 'bash'
@@ -46,10 +42,12 @@ brew 'yq'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
+cask '1password'
 cask 'bitwarden'
 cask 'firefox-developer-edition', language: 'en-GB'
 cask 'font-fira-code'
-cask 'google-cloud-sdk'
+cask 'gcloud-cli'
 cask 'iterm2'
 cask 'numi'
+cask 'docker'
 cask 'visual-studio-code'
