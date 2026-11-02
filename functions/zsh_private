@@ -9,10 +9,10 @@ export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 
-export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/python@3.8/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/icu4c/lib -L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/curl/include -I/usr/local/opt/libffi/include -I/usr/local/opt/icu4c/include -I/usr/local/opt/sqlite/include"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib -L/opt/homebrew/opt/curl/lib -L/opt/homebrew/opt/python@3.14/lib -L/opt/homebrew/opt/openssl@4/lib -L/opt/homebrew/opt/libffi/lib -L/opt/homebrew/opt/icu4c/lib -L/opt/homebrew/opt/sqlite/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include -I/opt/homebrew/opt/openssl@4/include -I/opt/homebrew/opt/curl/include -I/opt/homebrew/opt/libffi/include -I/opt/homebrew/opt/icu4c/include -I/opt/homebrew/opt/sqlite/include"
 
-export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig:/usr/local/opt/ruby/lib/pkgconfig"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig:/opt/homebrew/opt/ruby/lib/pkgconfig"
 
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -41,7 +41,6 @@ alias gf='git diff'
 alias gcm='git commit'
 alias gp='git push origin HEAD'
 alias gs='git status'
-alias gcm='git checkout'
 alias gpom='git pull origin'
 alias k="kubecolor"
 alias kubectl="kubecolor"
