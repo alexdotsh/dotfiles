@@ -44,22 +44,19 @@
         "editor.tabSize": 2
     },
     "security.workspace.trust.untrustedFiles": "newWindow",
-    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.empty.hint": "hidden",
     "editor.bracketPairColorization.enabled": true,
     "editor.inlineSuggest.enabled": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "telemetry.telemetryLevel": "off",
     "editor.tabSize": 2,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "editor.codeLensFontFamily": "'Fira Code'",
     "terminal.explorerKind": "external",
     "workbench.sideBar.location": "right",
-    "redhat.telemetry.enabled": false,
     "git.autofetch": true,
     "vscode_custom_css.imports": [
-        "file:///${userHome}/.config/vscode/sidebar.css"
+        "file://${userHome}/.config/vscode/sidebar.css"
     ],
     "window.zoomLevel": 1,
     "workbench.activityBar.location": "hidden",
