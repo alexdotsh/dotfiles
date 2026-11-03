@@ -19,9 +19,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export BAT_THEME="Solarized (dark)"
 
 export GOPATH="${HOME}/go"
-export GOROOT="${HOMEBREW_PREFIX}/bin/go"
 export PATH="${PATH}:${GOPATH}/bin"
-export PATH="${PATH}:${GOROOT}/bin"
 
 # configure history
 export HISTFILE="${HOME}/.zsh_history"

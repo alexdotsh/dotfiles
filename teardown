@@ -6,5 +6,3 @@ if [ $? -ne 0 ]; then
 	exit 1
 	echo "brew not installed or not in PATH"
 fi
-
-rm -rf ${HOMEBREW_PREFIX}
