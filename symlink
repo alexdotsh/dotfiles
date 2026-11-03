@@ -14,7 +14,7 @@ mkdir -p "${HOME}/Library/Application Support/Code/User"
 
 ln -sf "${PWD}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 ln -sf "${PWD}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
-ln -sf "${PWD}/vscode/sidebar.css" "${HOME}/.config/vscode/sidebar.css"
+ln -sf "${PWD}/vscode/sidebar.css" "${HOME}/.config/vscode-sidebar.css"
 
 if [ ! -f "${HOME}/.zshrc" ]; then
 	touch "${HOME}/.zshrc"

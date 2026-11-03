@@ -56,7 +56,7 @@
     "workbench.sideBar.location": "right",
     "git.autofetch": true,
     "vscode_custom_css.imports": [
-        "file://${userHome}/.config/vscode/sidebar.css"
+        "file://${userHome}/.config/vscode-sidebar.css"
     ],
     "window.zoomLevel": 1,
     "workbench.activityBar.location": "hidden",
