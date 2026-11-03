@@ -7,7 +7,7 @@ brew update
 brew upgrade
 
 # Bundle install from Brewfile
-brew bundle
+brew bundle --verbose --debug
 
 # Cleanup outdated versions from Cellar
 brew cleanup
