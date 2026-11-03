@@ -18,7 +18,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export BAT_THEME="Solarized (dark)"
 
 export GOPATH="${HOME}/go"
-export PATH="${PATH}:${GOPATH}/bin"
+export PATH="${PATH}:${GOPATH}/bin:${HOMEBREW_PREFIX}/share/google-cloud-sdk/bin"
 
 # configure history
 HISTFILE="${HOME}/.zsh_history"

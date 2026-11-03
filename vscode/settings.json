@@ -61,5 +61,8 @@
     "window.zoomLevel": 1,
     "workbench.activityBar.location": "hidden",
     "chat.disableAIFeatures": true,
-    "terminal.integrated.initialHint": false
+    "terminal.integrated.initialHint": false,
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "workbench.browser.showInTitleBar": false
 }
