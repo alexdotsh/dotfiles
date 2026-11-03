@@ -9,10 +9,9 @@ export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
 
-export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/ruby/lib -L${HOMEBREW_PREFIX}/opt/curl/lib -L${HOMEBREW_PREFIX}/opt/python@3.14/lib -L${HOMEBREW_PREFIX}/opt/openssl@4/lib -L${HOMEBREW_PREFIX}/opt/libffi/lib -L${HOMEBREW_PREFIX}/opt/icu4c/lib -L${HOMEBREW_PREFIX}/opt/sqlite/lib"
-export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/ruby/include -I${HOMEBREW_PREFIX}/opt/openssl@4/include -I${HOMEBREW_PREFIX}/opt/curl/include -I${HOMEBREW_PREFIX}/opt/libffi/include -I${HOMEBREW_PREFIX}/opt/icu4c/include -I${HOMEBREW_PREFIX}/opt/sqlite/include"
-
-export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/curl/lib/pkgconfig:${HOMEBREW_PREFIX}/opt/ruby/lib/pkgconfig"
+# export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/ruby/lib -L${HOMEBREW_PREFIX}/opt/curl/lib -L${HOMEBREW_PREFIX}/opt/python@3.14/lib -L${HOMEBREW_PREFIX}/opt/openssl@4/lib -L${HOMEBREW_PREFIX}/opt/libffi/lib -L${HOMEBREW_PREFIX}/opt/icu4c/lib -L${HOMEBREW_PREFIX}/opt/sqlite/lib"
+# export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/ruby/include -I${HOMEBREW_PREFIX}/opt/openssl@4/include -I${HOMEBREW_PREFIX}/opt/curl/include -I${HOMEBREW_PREFIX}/opt/libffi/include -I${HOMEBREW_PREFIX}/opt/icu4c/include -I${HOMEBREW_PREFIX}/opt/sqlite/include"
+# export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/curl/lib/pkgconfig:${HOMEBREW_PREFIX}/opt/ruby/lib/pkgconfig"
 
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -31,8 +30,8 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt EXTENDED_HISTORY
 
-command -v bat > /dev/null && alias cat='bat --pager=never'
-command -v bat > /dev/null && alias less='bat'
+command -v bat >/dev/null && alias cat='bat --pager=never'
+command -v bat >/dev/null && alias less='bat'
 alias ls='gls -la --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -53,15 +52,16 @@ alias kd='kubectl describe'
 eval "$(gdircolors ${HOME}/.dir_colors/dircolors.256dark)"
 
 if [[ $(uname -m) == 'arm64' ]]; then
-    source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+	source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 else
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # Pure prompt
 fpath+=${HOME}/.zsh/pure
 
-autoload -U promptinit; promptinit
+autoload -U promptinit
+promptinit
 
 # change the path color
 zstyle :prompt:pure:path color cyan
