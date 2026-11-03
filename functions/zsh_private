@@ -21,14 +21,11 @@ export GOPATH="${HOME}/go"
 export PATH="${PATH}:${GOPATH}/bin"
 
 # configure history
-export HISTFILE="${HOME}/.zsh_history"
-export HISTSIZE=100000
-export SAVEHIST=100000
-setopt INC_APPEND_HISTORY
-export HISTTIMEFORMAT="%d/%m/%y %T"
+HISTFILE="${HOME}/.zsh_history"
+HISTSIZE=120000
+SAVEHIST=100000
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
-setopt EXTENDED_HISTORY
 
 command -v bat >/dev/null && alias cat='bat --pager=never'
 command -v bat >/dev/null && alias less='bat'
@@ -36,7 +33,7 @@ command -v gls >/dev/null && alias ls='gls -la --color=auto --group-directories-
 command -v grep >/dev/null && alias grep='grep --color=auto'
 command -v fgrep >/dev/null && alias fgrep='fgrep --color=auto'
 command -v egrep >/dev/null && alias egrep='egrep --color=auto'
-alias history='history 1'
+alias history='fc -l -t "%d/%m/%y %T" 1'
 command -v helm >/dev/null && alias hm='helm'
 if command -v git >/dev/null; then
 	alias gco='git checkout'
