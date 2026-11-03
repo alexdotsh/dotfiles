@@ -32,22 +32,28 @@ setopt EXTENDED_HISTORY
 
 command -v bat >/dev/null && alias cat='bat --pager=never'
 command -v bat >/dev/null && alias less='bat'
-alias ls='gls -la --color=auto --group-directories-first'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+command -v gls >/dev/null && alias ls='gls -la --color=auto --group-directories-first'
+command -v grep >/dev/null && alias grep='grep --color=auto'
+command -v fgrep >/dev/null && alias fgrep='fgrep --color=auto'
+command -v egrep >/dev/null && alias egrep='egrep --color=auto'
 alias history='history 1'
-alias hm='helm'
-alias gco='git checkout'
-alias gf='git diff'
-alias gcm='git commit'
-alias gp='git push origin HEAD'
-alias gs='git status'
-alias gpom='git pull origin'
-alias k="kubecolor"
-alias kubectl="kubecolor"
-alias kg='kubectl get'
-alias kd='kubectl describe'
+command -v helm >/dev/null && alias hm='helm'
+if command -v git >/dev/null; then
+	alias gco='git checkout'
+	alias gf='git diff'
+	alias gcm='git commit'
+	alias gp='git push origin HEAD'
+	alias gs='git status'
+	alias gpom='git pull origin'
+fi
+if command -v kubectl >/dev/null; then
+	if command -v kubecolor >/dev/null; then
+		alias k='kubecolor'
+		alias kubectl='kubecolor'
+	fi
+	alias kg='kubectl get'
+	alias kd='kubectl describe'
+fi
 
 eval "$(gdircolors ${HOME}/.dir_colors/dircolors.256dark)"
 
@@ -72,8 +78,10 @@ set -o emacs
 
 # export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-alias base64=gbase64
-alias sed=gsed
-alias tf=terraform
-alias tfp="tf plan"
-alias tfa="tf apply"
+command -v gbase64 >/dev/null && alias base64=gbase64
+command -v gsed >/dev/null && alias sed=gsed
+if command -v terraform >/dev/null; then
+	alias tf=terraform
+	alias tfp="tf plan"
+	alias tfa="tf apply"
+fi
