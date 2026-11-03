@@ -10,16 +10,16 @@ source "$(dirname "${BASH_SOURCE[0]}")/brew"
 
 # Setup pure
 if [ ! -d "${HOME}/.zsh/pure" ]; then
-    echo "Cloning pure"
+	echo "Cloning pure"
 
-    git clone --depth 1 https://github.com/sindresorhus/pure.git "${HOME}/.zsh/pure"
+	git clone --depth 1 https://github.com/sindresorhus/pure.git "${HOME}/.zsh/pure"
 fi
 
 if [ ! -f "${HOME}/.dir_colors/dircolors.256dark" ]; then
-    echo "Downloading dircolors.256dark"
+	echo "Downloading dircolors.256dark"
 
-    mkdir -p "${HOME}/.dir_colors"
-    curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
+	mkdir -p "${HOME}/.dir_colors"
+	curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o "${HOME}/.dir_colors/dircolors.256dark"
 fi
 
 source "$(dirname "${BASH_SOURCE[0]}")/symlink"

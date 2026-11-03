@@ -1,8 +1,8 @@
 [
     {
-    "key": "ctrl+alt+m",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "!terminalFocus"
+        "key": "ctrl+alt+m",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+`",

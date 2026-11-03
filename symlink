@@ -11,29 +11,29 @@ ln -sf "${PWD}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -sf "${PWD}/.gitconfig" "${HOME}/.gitconfig"
 
 if [[ $(uname -m) == 'arm64' ]]; then
-    "${HOMEBREW_PREFIX}/bin/code" && sleep 5
+	"${HOMEBREW_PREFIX}/bin/code" && sleep 15
 else
-    /usr/local/bin/code && sleep 5
+	/usr/local/bin/code && sleep 15
 fi
 
 if [ ! -f "${HOME}"/Library/Application\ Support/Code/User/settings.json ]; then
-    touch "${HOME}"/Library/Application\ Support/Code/User/settings.json
+	touch "${HOME}"/Library/Application\ Support/Code/User/settings.json
 fi
 
 if [ ! -f "${HOME}"/Library/Application\ Support/Code/User/keybindings.json ]; then
-    touch "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
+	touch "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
 fi
 
 ln -sf "${PWD}/vscode/settings.json" "${HOME}"/Library/Application\ Support/Code/User/settings.json
 ln -sf "${PWD}/vscode/keybindings.json" "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
-mkdir -p "${HOME}"/vscode-custom; ln -sf "${PWD}/vscode/sidebar.css" "${HOME}"/vscode-custom/sidebar.css
+ln -sf "${PWD}/vscode/sidebar.css" "${HOME}"/.config/vscode/sidebar.css
 
 if [ ! -f "${HOME}/.zshrc" ]; then
-    touch "${HOME}/.zshrc"
+	touch "${HOME}/.zshrc"
 fi
 
 if grep -Fxq "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" "${HOME}/.zshrc"; then
-    echo ''
+	echo ''
 else
-    echo "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" >> "${HOME}/.zshrc"
+	echo "[ -r ${HOME}/.zsh_private ] && source ${HOME}/.zsh_private" >>"${HOME}/.zshrc"
 fi
