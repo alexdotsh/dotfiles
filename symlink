@@ -12,17 +12,9 @@ ln -sf "${PWD}/.gitconfig" "${HOME}/.gitconfig"
 
 mkdir -p "${HOME}/Library/Application Support/Code/User"
 
-if [ ! -f "${HOME}"/Library/Application\ Support/Code/User/settings.json ]; then
-	touch "${HOME}"/Library/Application\ Support/Code/User/settings.json
-fi
-
-if [ ! -f "${HOME}"/Library/Application\ Support/Code/User/keybindings.json ]; then
-	touch "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
-fi
-
-ln -sf "${PWD}/vscode/settings.json" "${HOME}"/Library/Application\ Support/Code/User/settings.json
-ln -sf "${PWD}/vscode/keybindings.json" "${HOME}"/Library/Application\ Support/Code/User/keybindings.json
-ln -sf "${PWD}/vscode/sidebar.css" "${HOME}"/.config/vscode/sidebar.css
+ln -sf "${PWD}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+ln -sf "${PWD}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
+ln -sf "${PWD}/vscode/sidebar.css" "${HOME}/.config/vscode/sidebar.css"
 
 if [ ! -f "${HOME}/.zshrc" ]; then
 	touch "${HOME}/.zshrc"
