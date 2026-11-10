@@ -28,6 +28,8 @@
     "terminal.integrated.lineHeight": 1.4,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.scrollback": 9999,
+    // "terminal.integrated.defaultLocation": "editor",
+    "terminal.integrated.cwd": "${fileDirname}",
     "extensions.ignoreRecommendations": true,
     "markdown.preview.fontSize": 16,
     "[markdown]": {
