@@ -66,5 +66,8 @@
     "terminal.integrated.initialHint": false,
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
-    "workbench.browser.showInTitleBar": false
+    "workbench.browser.showInTitleBar": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "disabled"
+    }
 }
