@@ -73,12 +73,17 @@ prompt pure
 
 set -o emacs
 
-# export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
 command -v gbase64 >/dev/null && alias base64=gbase64
 command -v gsed >/dev/null && alias sed=gsed
 if command -v terraform >/dev/null; then
 	alias tf=terraform
 	alias tfp="tf plan"
 	alias tfa="tf apply"
+fi
+
+if command -v python3 >/dev/null; then
+	alias python="python3"
+	if command -v pip3 >/dev/null; then
+		alias pip="pip3"
+	fi
 fi
